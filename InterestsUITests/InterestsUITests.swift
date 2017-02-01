@@ -1,9 +1,9 @@
 //
-//  InterestsUITests.swift
-//  InterestsUITests
+//  InterestUITests.swift
+//  compassIO
 //
-//  Created by Duc Tran on 6/13/15.
-//  Copyright © 2015 Developer Inspirus. All rights reserved.
+//  Created by LogicAppSourceIO on 27/01/17.
+//  Copyright © 2017 Logicappsource. All rights reserved.
 //
 
 import Foundation

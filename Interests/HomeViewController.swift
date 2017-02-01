@@ -1,11 +1,10 @@
 //
 //  HomeViewController.swift
-//  Interests
+//  compassIO
 //
-//  Created by Duc Tran on 6/13/15.
-//  Copyright © 2015 Developer Inspirus. All rights reserved.
+//  Created by LogicAppSourceIO on 27/01/17.
+//  Copyright © 2017 Logicappsource. All rights reserved.
 //
-
 import UIKit
 
 class HomeViewController: UIViewController
@@ -19,10 +18,10 @@ class HomeViewController: UIViewController
     @IBOutlet weak var currentUserFullNameButton: UIButton!
     
     // MARK: - UICollectionViewDataSource
-    private var interests = Interest.createInterests()
+    fileprivate var interests = Interest.createInterests()
     
-    override func preferredStatusBarStyle() -> UIStatusBarStyle {
-        return .LightContent
+    override var preferredStatusBarStyle : UIStatusBarStyle {
+        return .lightContent
     }
     
     override func viewDidLoad() {
@@ -31,27 +30,27 @@ class HomeViewController: UIViewController
         // Do any additional setup after loading the view.
     }
     
-    private struct Storyboard {
+    fileprivate struct Storyboard {
         static let CellIdentifier = "Interest Cell"
     }
 }
 
 extension HomeViewController : UICollectionViewDataSource
 {
-    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
     
-    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
     {
         return interests.count
     }
     
-    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
     {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(Storyboard.CellIdentifier, forIndexPath: indexPath) as! InterestCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Storyboard.CellIdentifier, for: indexPath) as! InterestCollectionViewCell
         
-        cell.interest = self.interests[indexPath.item]
+        cell.interest = self.interests[(indexPath as NSIndexPath).item]
         
         return cell
     }
@@ -59,17 +58,17 @@ extension HomeViewController : UICollectionViewDataSource
 
 extension HomeViewController : UIScrollViewDelegate
 {
-    func scrollViewWillEndDragging(scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>)
+    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>)
     {
         let layout = self.collectionView?.collectionViewLayout as! UICollectionViewFlowLayout
         let cellWidthIncludingSpacing = layout.itemSize.width + layout.minimumLineSpacing
         
-        var offset = targetContentOffset.memory
+        var offset = targetContentOffset.pointee
         let index = (offset.x + scrollView.contentInset.left) / cellWidthIncludingSpacing
         let roundedIndex = round(index)
         
         offset = CGPoint(x: roundedIndex * cellWidthIncludingSpacing - scrollView.contentInset.left, y: -scrollView.contentInset.top)
-        targetContentOffset.memory = offset
+        targetContentOffset.pointee = offset
     }
 }
 

@@ -1,9 +1,9 @@
 //
-//  InterestsTests.swift
-//  InterestsTests
+//  InterestTests.swift
+//  compassIO
 //
-//  Created by Duc Tran on 6/13/15.
-//  Copyright © 2015 Developer Inspirus. All rights reserved.
+//  Created by LogicAppSourceIO on 27/01/17.
+//  Copyright © 2017 Logicappsource. All rights reserved.
 //
 
 import XCTest
@@ -27,7 +27,7 @@ class InterestsTests: XCTestCase {
     
     func testPerformanceExample() {
         // This is an example of a performance test case.
-        self.measureBlock() {
+        self.measure() {
             // Put the code you want to measure the time of here.
         }
     }

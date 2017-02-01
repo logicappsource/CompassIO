@@ -36,16 +36,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		F557723D1B2C65C100DF2649 /* Interests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Interests.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F557723D1B2C65C100DF2649 /* CompassIO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CompassIO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F55772401B2C65C100DF2649 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F55772451B2C65C100DF2649 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F55772471B2C65C100DF2649 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F557724A1B2C65C100DF2649 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F557724C1B2C65C100DF2649 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F55772511B2C65C100DF2649 /* InterestsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InterestsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F55772511B2C65C100DF2649 /* CompassIOTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CompassIOTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F55772551B2C65C100DF2649 /* InterestsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestsTests.swift; sourceTree = "<group>"; };
 		F55772571B2C65C100DF2649 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F557725C1B2C65C100DF2649 /* InterestsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InterestsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F557725C1B2C65C100DF2649 /* CompassIOUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CompassIOUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F55772601B2C65C100DF2649 /* InterestsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestsUITests.swift; sourceTree = "<group>"; };
 		F55772621B2C65C100DF2649 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F557726E1B2C661100DF2649 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -91,9 +91,9 @@
 		F557723E1B2C65C100DF2649 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F557723D1B2C65C100DF2649 /* Interests.app */,
-				F55772511B2C65C100DF2649 /* InterestsTests.xctest */,
-				F557725C1B2C65C100DF2649 /* InterestsUITests.xctest */,
+				F557723D1B2C65C100DF2649 /* CompassIO.app */,
+				F55772511B2C65C100DF2649 /* CompassIOTests.xctest */,
+				F557725C1B2C65C100DF2649 /* CompassIOUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -150,9 +150,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F557723C1B2C65C100DF2649 /* Interests */ = {
+		F557723C1B2C65C100DF2649 /* CompassIO */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F55772651B2C65C100DF2649 /* Build configuration list for PBXNativeTarget "Interests" */;
+			buildConfigurationList = F55772651B2C65C100DF2649 /* Build configuration list for PBXNativeTarget "CompassIO" */;
 			buildPhases = (
 				F55772391B2C65C100DF2649 /* Sources */,
 				F557723A1B2C65C100DF2649 /* Frameworks */,
@@ -162,14 +162,14 @@
 			);
 			dependencies = (
 			);
-			name = Interests;
+			name = CompassIO;
 			productName = Interests;
-			productReference = F557723D1B2C65C100DF2649 /* Interests.app */;
+			productReference = F557723D1B2C65C100DF2649 /* CompassIO.app */;
 			productType = "com.apple.product-type.application";
 		};
-		F55772501B2C65C100DF2649 /* InterestsTests */ = {
+		F55772501B2C65C100DF2649 /* CompassIOTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F55772681B2C65C100DF2649 /* Build configuration list for PBXNativeTarget "InterestsTests" */;
+			buildConfigurationList = F55772681B2C65C100DF2649 /* Build configuration list for PBXNativeTarget "CompassIOTests" */;
 			buildPhases = (
 				F557724D1B2C65C100DF2649 /* Sources */,
 				F557724E1B2C65C100DF2649 /* Frameworks */,
@@ -180,14 +180,14 @@
 			dependencies = (
 				F55772531B2C65C100DF2649 /* PBXTargetDependency */,
 			);
-			name = InterestsTests;
+			name = CompassIOTests;
 			productName = InterestsTests;
-			productReference = F55772511B2C65C100DF2649 /* InterestsTests.xctest */;
+			productReference = F55772511B2C65C100DF2649 /* CompassIOTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		F557725B1B2C65C100DF2649 /* InterestsUITests */ = {
+		F557725B1B2C65C100DF2649 /* CompassIOUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F557726B1B2C65C100DF2649 /* Build configuration list for PBXNativeTarget "InterestsUITests" */;
+			buildConfigurationList = F557726B1B2C65C100DF2649 /* Build configuration list for PBXNativeTarget "CompassIOUITests" */;
 			buildPhases = (
 				F55772581B2C65C100DF2649 /* Sources */,
 				F55772591B2C65C100DF2649 /* Frameworks */,
@@ -198,9 +198,9 @@
 			dependencies = (
 				F557725E1B2C65C100DF2649 /* PBXTargetDependency */,
 			);
-			name = InterestsUITests;
+			name = CompassIOUITests;
 			productName = InterestsUITests;
-			productReference = F557725C1B2C65C100DF2649 /* InterestsUITests.xctest */;
+			productReference = F557725C1B2C65C100DF2649 /* CompassIOUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -210,22 +210,26 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0700;
-				ORGANIZATIONNAME = "Developer Inspirus";
+				ORGANIZATIONNAME = LogicAppSourceIO;
 				TargetAttributes = {
 					F557723C1B2C65C100DF2649 = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = JWZKK84V7N;
+						LastSwiftMigration = 0800;
 					};
 					F55772501B2C65C100DF2649 = {
 						CreatedOnToolsVersion = 7.0;
+						LastSwiftMigration = 0800;
 						TestTargetID = F557723C1B2C65C100DF2649;
 					};
 					F557725B1B2C65C100DF2649 = {
 						CreatedOnToolsVersion = 7.0;
+						LastSwiftMigration = 0800;
 						TestTargetID = F557723C1B2C65C100DF2649;
 					};
 				};
 			};
-			buildConfigurationList = F55772381B2C65C100DF2649 /* Build configuration list for PBXProject "Interests" */;
+			buildConfigurationList = F55772381B2C65C100DF2649 /* Build configuration list for PBXProject "CompassIO" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -238,9 +242,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F557723C1B2C65C100DF2649 /* Interests */,
-				F55772501B2C65C100DF2649 /* InterestsTests */,
-				F557725B1B2C65C100DF2649 /* InterestsUITests */,
+				F557723C1B2C65C100DF2649 /* CompassIO */,
+				F55772501B2C65C100DF2649 /* CompassIOTests */,
+				F557725B1B2C65C100DF2649 /* CompassIOUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -305,12 +309,12 @@
 /* Begin PBXTargetDependency section */
 		F55772531B2C65C100DF2649 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = F557723C1B2C65C100DF2649 /* Interests */;
+			target = F557723C1B2C65C100DF2649 /* CompassIO */;
 			targetProxy = F55772521B2C65C100DF2649 /* PBXContainerItemProxy */;
 		};
 		F557725E1B2C65C100DF2649 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = F557723C1B2C65C100DF2649 /* Interests */;
+			target = F557723C1B2C65C100DF2649 /* CompassIO */;
 			targetProxy = F557725D1B2C65C100DF2649 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -420,10 +424,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = JWZKK84V7N;
 				INFOPLIST_FILE = Interests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.developerinspirus.Interests;
+				PRODUCT_BUNDLE_IDENTIFIER = CompassIO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -431,10 +437,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = JWZKK84V7N;
 				INFOPLIST_FILE = Interests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.developerinspirus.Interests;
+				PRODUCT_BUNDLE_IDENTIFIER = CompassIO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -446,7 +454,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.developerinspirus.InterestsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Interests.app/Interests";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CompassIO.app/CompassIO";
 			};
 			name = Debug;
 		};
@@ -458,7 +467,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.developerinspirus.InterestsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Interests.app/Interests";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CompassIO.app/CompassIO";
 			};
 			name = Release;
 		};
@@ -469,6 +479,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.developerinspirus.InterestsUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = Interests;
 				USES_XCTRUNNER = YES;
 			};
@@ -481,6 +492,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.developerinspirus.InterestsUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = Interests;
 				USES_XCTRUNNER = YES;
 			};
@@ -489,7 +501,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F55772381B2C65C100DF2649 /* Build configuration list for PBXProject "Interests" */ = {
+		F55772381B2C65C100DF2649 /* Build configuration list for PBXProject "CompassIO" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F55772631B2C65C100DF2649 /* Debug */,
@@ -498,29 +510,32 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F55772651B2C65C100DF2649 /* Build configuration list for PBXNativeTarget "Interests" */ = {
+		F55772651B2C65C100DF2649 /* Build configuration list for PBXNativeTarget "CompassIO" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F55772661B2C65C100DF2649 /* Debug */,
 				F55772671B2C65C100DF2649 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		F55772681B2C65C100DF2649 /* Build configuration list for PBXNativeTarget "InterestsTests" */ = {
+		F55772681B2C65C100DF2649 /* Build configuration list for PBXNativeTarget "CompassIOTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F55772691B2C65C100DF2649 /* Debug */,
 				F557726A1B2C65C100DF2649 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		F557726B1B2C65C100DF2649 /* Build configuration list for PBXNativeTarget "InterestsUITests" */ = {
+		F557726B1B2C65C100DF2649 /* Build configuration list for PBXNativeTarget "CompassIOUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F557726C1B2C65C100DF2649 /* Debug */,
 				F557726D1B2C65C100DF2649 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
