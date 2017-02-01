@@ -22,10 +22,17 @@ class InterestViewController: UIViewController {
     private var headerView: InterestHeaderView!
     private var headerMaskLayer: CAShapeLayer!
     
+    // Datasource
+    fileprivate var posts = [Post]()
+    
+    
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tableView.estimatedRowHeight = 387.0  // tableView.rowHeight
+        tableView.rowHeight = UITableViewAutomaticDimension
 
         // Do any additional setup after loading the view.
 
@@ -42,8 +49,25 @@ class InterestViewController: UIViewController {
         
         updateHeaderView()
         
+        fetchPosts()
         
     }
+    
+    
+    
+    
+    
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        updateHeaderView()
+    }
+    
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        updateHeaderView()
+    }
+
     
     
     func updateHeaderView(){
@@ -58,8 +82,26 @@ class InterestViewController: UIViewController {
             
         }
         
+        headerView.frame = headerRect
+        
+        // Cut Away 
+        let path = UIBezierPath()
+        path.move( to: CGPoint(x: 0 , y: 0 ))
+        path.addLine(to: CGPoint(x: headerRect.width, y: 0 ))
+        path.addLine(to: CGPoint(x: headerRect.width, y: headerRect.height))
+        path.addLine(to: CGPoint(x:0, y: headerRect.height - tableHeaderCutAway))
+        headerMaskLayer?.path = path.cgPath // !
+        
     }
    
+    
+    
+    
+    func fetchPosts() {
+        posts = Post.allPosts
+        tableView.reloadData()
+        
+    }
     
     
     /*
@@ -73,3 +115,71 @@ class InterestViewController: UIViewController {
     */
 
 }
+
+
+
+extension InterestViewController: UITableViewDataSource{
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        //Returns nr of sections
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // Return the number of rows in the section.
+        return posts.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let post = posts[indexPath.row]
+        
+        if post.postImage != nil {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "PostCellWithImage", for: indexPath) as! PostTableViewCell
+            cell.post = post
+            
+            return cell
+            
+        }else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "PostCellWithoutImage", for: indexPath) as! PostTableViewCell
+            cell.post = post
+            
+            return cell
+        
+        }
+        
+    }
+    
+}
+
+
+//Zoom effect ! on tocuh-drag
+
+extension InterestViewController: UIScrollViewDelegate {
+    
+    
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        updateHeaderView()
+         /*
+        //Challenge: - Add code to show/hide "Pull down to close" 
+        let offsetY = scrollView.contentOffset.y
+        let adjustment: CFloat = 100.0
+        
+       
+        //For later use 
+        if(-offsetY) > (tableHeaderHeight + adjustment) {
+            self.dissmissViewControllerAnimated(true, completion: nil)
+        }
+        
+        if(-offsetY) > (tableHeaderHeight) {
+            self.headerView.pullDownToCloseLabel.hidden = false
+        } else {
+            self.headerView.pullDownToCloseLabel.hidden = true
+        }
+        
+        */
+    }
+}
+
+
