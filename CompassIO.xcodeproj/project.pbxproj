@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6EB61ABA1E41F31300F6AB19 /* InterestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB61AB91E41F31300F6AB19 /* InterestViewController.swift */; };
+		6EB61ABC1E41F4AE00F6AB19 /* InterestHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB61ABB1E41F4AE00F6AB19 /* InterestHeaderView.swift */; };
 		F55772411B2C65C100DF2649 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55772401B2C65C100DF2649 /* AppDelegate.swift */; };
 		F55772461B2C65C100DF2649 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F55772441B2C65C100DF2649 /* Main.storyboard */; };
 		F55772481B2C65C100DF2649 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F55772471B2C65C100DF2649 /* Assets.xcassets */; };
@@ -36,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6EB61AB91E41F31300F6AB19 /* InterestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterestViewController.swift; sourceTree = "<group>"; };
+		6EB61ABB1E41F4AE00F6AB19 /* InterestHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterestHeaderView.swift; sourceTree = "<group>"; };
 		F557723D1B2C65C100DF2649 /* CompassIO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CompassIO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F55772401B2C65C100DF2649 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F55772451B2C65C100DF2649 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -78,6 +82,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6EB61AB81E41F2AF00F6AB19 /* Interest Screen */ = {
+			isa = PBXGroup;
+			children = (
+				6EB61AB91E41F31300F6AB19 /* InterestViewController.swift */,
+				6EB61ABB1E41F4AE00F6AB19 /* InterestHeaderView.swift */,
+			);
+			name = "Interest Screen";
+			path = ..;
+			sourceTree = "<group>";
+		};
 		F55772341B2C65C100DF2649 = {
 			isa = PBXGroup;
 			children = (
@@ -103,6 +117,7 @@
 			children = (
 				F55772401B2C65C100DF2649 /* AppDelegate.swift */,
 				F55772731B2C6AD000DF2649 /* Home Screen */,
+				6EB61AB81E41F2AF00F6AB19 /* Interest Screen */,
 				F55772721B2C6ACA00DF2649 /* Model */,
 				F55772441B2C65C100DF2649 /* Main.storyboard */,
 				F55772471B2C65C100DF2649 /* Assets.xcassets */,
@@ -283,6 +298,8 @@
 			files = (
 				F55772751B2C6C4300DF2649 /* InterestCollectionViewCell.swift in Sources */,
 				F55772711B2C6A5400DF2649 /* Interest.swift in Sources */,
+				6EB61ABA1E41F31300F6AB19 /* InterestViewController.swift in Sources */,
+				6EB61ABC1E41F4AE00F6AB19 /* InterestHeaderView.swift in Sources */,
 				F55772411B2C65C100DF2649 /* AppDelegate.swift in Sources */,
 				F557726F1B2C661100DF2649 /* HomeViewController.swift in Sources */,
 			);

@@ -20,6 +20,9 @@ class HomeViewController: UIViewController
     // MARK: - UICollectionViewDataSource
     fileprivate var interests = Interest.createInterests()
     
+    
+    
+    
     override var preferredStatusBarStyle : UIStatusBarStyle {
         return .lightContent
     }
@@ -56,6 +59,7 @@ extension HomeViewController : UICollectionViewDataSource
     }
 }
 
+//Scrolling all way to right - rebounce
 extension HomeViewController : UIScrollViewDelegate
 {
     func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>)
