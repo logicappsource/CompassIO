@@ -37,14 +37,17 @@ class InterestViewController: UIViewController {
     
 
     override func viewDidLoad() {
+        // Do any additional setup after loading the view.
         super.viewDidLoad()
         
         tableView.estimatedRowHeight = 387.0  // tableView.rowHeight
         tableView.rowHeight = UITableViewAutomaticDimension
 
-        // Do any additional setup after loading the view.
-
         headerView = tableView.tableHeaderView as! InterestHeaderView
+        headerView.delegate = self
+        headerView.interest = interest
+        
+        
         tableView.tableHeaderView = nil
         tableView.addSubview(headerView)
         
@@ -56,7 +59,6 @@ class InterestViewController: UIViewController {
         headerView.layer.mask = headerMaskLayer
         
         updateHeaderView()
-        
         fetchPosts()
         
     }
@@ -165,8 +167,7 @@ extension InterestViewController: UITableViewDataSource{
 }
 
 
-//Zoom effect ! on touch-drag
-
+//Zoom effect! on touch-drag
 extension InterestViewController: UIScrollViewDelegate {
     
     
@@ -192,5 +193,15 @@ extension InterestViewController: UIScrollViewDelegate {
  
     }
 }
+
+extension InterestViewController: InterestHeaderViewDelegate {
+    
+    func closeButtonClicked() {
+        print("close buttonn clicked gets called ")
+        print("Dissmiviewcontroller")
+        self.dismiss(animated: true, completion: nil)
+    }
+}
+
 
 

@@ -21,7 +21,11 @@ class InterestHeaderView: UIView
     }
     
     
-    var delegate: InterestHeaderViewDelegate! 
+    var delegate: InterestHeaderViewDelegate! {
+        didSet {
+            print("interest header view delegate did set")
+        }
+    }
     
     fileprivate func updateUI()
     {
@@ -45,6 +49,12 @@ class InterestHeaderView: UIView
         super.layoutSubviews()
         closeButtonBackgroundView.layer.cornerRadius = closeButtonBackgroundView.bounds.width / 2
         closeButtonBackgroundView.layer.masksToBounds = true
+    }
+    @IBAction func closeButtonTapped(sender: UIButton) {
+        print("close button tapped gets called ")
+        
+        //Delegate right now Is InterestViewController 
+        delegate.closeButtonClicked()
     }
 }
 
