@@ -7,6 +7,10 @@
 //
 import UIKit
 
+protocol InterestHeaderViewDelegate {
+    func closeButtonClicked()
+}
+
 class InterestHeaderView: UIView
 {
     // MARK: - Public API
@@ -15,6 +19,9 @@ class InterestHeaderView: UIView
             updateUI()
         }
     }
+    
+    
+    var delegate: InterestHeaderViewDelegate! 
     
     fileprivate func updateUI()
     {

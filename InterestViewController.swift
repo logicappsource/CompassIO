@@ -17,13 +17,21 @@ class InterestViewController: UIViewController {
     
     //MARK: - Private 
     @IBOutlet weak var tableView: UITableView!
-    private let tableHeaderHeight: CGFloat = 350.0
+    public let tableHeaderHeight: CGFloat = 350.0
     private let tableHeaderCutAway: CGFloat = 50.0
-    private var headerView: InterestHeaderView!
+    public var headerView: InterestHeaderView!
     private var headerMaskLayer: CAShapeLayer!
     
     // Datasource
     fileprivate var posts = [Post]()
+    
+    // MARK: View Controller Life Cycle 
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+        
+    }
     
     
     
@@ -53,8 +61,11 @@ class InterestViewController: UIViewController {
         
     }
     
-    
-    
+    // Hide status bar -> Func not working 
+    /*
+    override func prefersStatusBarHidden()  -> Bool {
+        return true
+    } */
     
     
     override func viewWillLayoutSubviews() {
@@ -67,6 +78,7 @@ class InterestViewController: UIViewController {
         super.viewDidLayoutSubviews()
         updateHeaderView()
     }
+    
 
     
     
@@ -153,32 +165,31 @@ extension InterestViewController: UITableViewDataSource{
 }
 
 
-//Zoom effect ! on tocuh-drag
+//Zoom effect ! on touch-drag
 
 extension InterestViewController: UIScrollViewDelegate {
     
     
-    
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         updateHeaderView()
-         /*
-        //Challenge: - Add code to show/hide "Pull down to close" 
+        
+        //"Pull down to close"
         let offsetY = scrollView.contentOffset.y
-        let adjustment: CFloat = 100.0
+        let adjustment: CGFloat = 120.0
         
        
         //For later use 
         if(-offsetY) > (tableHeaderHeight + adjustment) {
-            self.dissmissViewControllerAnimated(true, completion: nil)
+             self.dismiss(animated: true, completion: nil)
         }
         
-        if(-offsetY) > (tableHeaderHeight) {
-            self.headerView.pullDownToCloseLabel.hidden = false
+        
+        if(-offsetY) > (tableHeaderHeight ) {
+            self.headerView.pullDownToCloseLabel.isHidden = false
         } else {
-            self.headerView.pullDownToCloseLabel.hidden = true
+            self.headerView.pullDownToCloseLabel.isHidden = true
         }
-        
-        */
+ 
     }
 }
 

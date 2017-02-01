@@ -31,12 +31,43 @@ class HomeViewController: UIViewController
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        /*
+        //Smallere iphone models.
+        if (UIScreen.main.bounds.size.height == 480.0) {
+            let flowLayout = self.collectionView.collectionViewLayout as! UICollectionViewFlowLayout
+            flowLayout.itemSize = CGSizeMake(250.0, 300.0)
+        }*/
+        
+        
+        configureUserProfile()
     }
+    
+    func configureUserProfile() {
+        //Config image btn
+        currentUserProfileImageButton.contentMode = UIViewContentMode.scaleAspectFill
+        currentUserProfileImageButton.layer.cornerRadius = currentUserProfileImageButton.bounds.width / 2
+        currentUserProfileImageButton.layer.masksToBounds = true
+    }
+
     
     fileprivate struct Storyboard {
         static let CellIdentifier = "Interest Cell"
     }
+    
+    // MARK: - Navigation
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "Show Interest" {
+            let cell = sender as! InterestCollectionViewCell
+            let interest = cell.interest
+            
+            let navigationViewController = segue.destination as! UINavigationController
+            let interestViewController = navigationViewController.topViewController as! InterestViewController
+            interestViewController.interest = interest
+        }
+    }
 }
+
 
 extension HomeViewController : UICollectionViewDataSource
 {
@@ -78,13 +109,7 @@ extension HomeViewController : UIScrollViewDelegate
 
     
     
-    
-    
-    
-    
-    
-    
-    
+
     
     
     
