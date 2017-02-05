@@ -169,6 +169,19 @@ class NewPostViewController: UIViewController,UIImagePickerControllerDelegate, U
             
         }
         
+        //Close button - hide -> and redirect to
+       func dismiss() {
+            postContentTextView.resignFirstResponder()
+            self.dismiss(animated: true, completion: nil)
+        }
+        
+         func post() {
+            postContentTextView.resignFirstResponder()
+            
+            //TODO create post sent to firebase
+            self.dismiss(animated: true, completion: nil)
+        }
+      
         
         
         

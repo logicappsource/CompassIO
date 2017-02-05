@@ -25,6 +25,8 @@ class InterestViewController: UIViewController {
     // Datasource
     fileprivate var posts = [Post]()
     
+    private var newPostButton: ActionButton!
+    
     // MARK: View Controller Life Cycle 
     
     override func viewWillAppear(_ animated: Bool) {
@@ -59,6 +61,9 @@ class InterestViewController: UIViewController {
         headerView.layer.mask = headerMaskLayer
         
         updateHeaderView()
+        
+        createNewPostButton()
+        
         fetchPosts()
         
     }
@@ -115,6 +120,15 @@ class InterestViewController: UIViewController {
         posts = Post.allPosts
         tableView.reloadData()
         
+    }
+    
+    func createNewPostButton() {
+        
+        newPostButton = ActionButton(attachedToView: self.view, items: [])
+        newPostButton.action = { button in
+            self.performSegue(withIdentifier: "Show Post Composer", sender: nil)
+        }
+        //Set the buttons background color
     }
     
     
