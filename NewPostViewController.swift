@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import Photos
 
-class NewPostViewController: UIViewController {
+class NewPostViewController: UIViewController,UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIGestureRecognizerDelegate {
 
     
     
@@ -24,26 +25,137 @@ class NewPostViewController: UIViewController {
     @IBOutlet weak var postContentTextView: UITextView!
     
     
+    
+    private var postImage: UIImage! //Store post Img and sent to Firebase
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        //Tap Gesture Recognizer
+        let tap = UITapGestureRecognizer(target: self, action: #selector(pickFeaturedImageClicked))
+        tap.delegate = self
+        postImageView?.addGestureRecognizer(tap)
+        
+        //Define UIIMagepicker
+        let picker = UIImagePickerController()
+        picker.delegate = self
+        
+        //UIImagePicker
+        picker.allowsEditing = false
+        picker.sourceType = .photoLibrary
+        self.present(picker, animated : true, completion: nil)
+        
+        
+        
         // Do any additional setup after loading the view.
+        postContentTextView.becomeFirstResponder()
+        postContentTextView.text = ""
+        
+        //Challenge: - Make the user profile image rounded (borderradius)
+        
+        
     }
-
+    
+    
+    func handleTap() {
+        print("tapped")
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    //Status bar -> Light
+    override var preferredStatusBarStyle : UIStatusBarStyle {
+        return .lightContent
     }
-    */
-
+    
+    
+    
+    
+    @IBAction func pickFeaturedImageClicked(_ sender: AnyObject) {
+        
+        let authorization = PHPhotoLibrary.authorizationStatus()
+        
+        //Decline
+        if authorization == .notDetermined {
+            PHPhotoLibrary.requestAuthorization({ (status) -> Void in
+                DispatchQueue.main.async(execute: { () -> Void in
+                    self.pickFeaturedImageClicked(sender)
+                })
+            })
+            return
+        }
+        //Authorize
+        if authorization == .authorized {
+            
+            let imagePicker = UIImagePickerController()
+            imagePicker.delegate = self
+            imagePicker.sourceType = UIImagePickerControllerSourceType.photoLibrary
+            imagePicker.allowsEditing = false
+            
+            //presentCamera()
+            
+            self.present(imagePicker, animated: true){
+                //After Completion
+                
+                
+                // var images = []
+                //self.postImage = images[0]
+                self.postImageView.image = self.postImage
+                
+                
+                //self.postImage = self.postImageView.image
+                
+            }
+            
+        }
+        
+        
+        func imagePickerController(_ picker: UIImagePickerController , didFinishPickingMediaWithInfo info: [String : Any]) {
+            
+            if let image = info[UIImagePickerControllerOriginalImage] as? UIImage
+            {
+                postImageView.image = image
+            } else {
+                //Error message
+            }
+            
+            self.dismiss(animated: true, completion: nil)
+            
+        }
+        
+        
+        func presentCamera() {
+            
+            //Challenge: Present normal image picker controller
+            // update the post iamge  + postImageView
+            
+            
+        }
+        
+        
+        
+        
+        /*
+         // MARK: - Navigation
+         
+         // In a storyboard-based application, you will often want to do a little preparation before navigation
+         override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+         // Get the new view controller using segue.destinationViewController.
+         // Pass the selected object to the new view controller.
+         }
+         */
+        
+        
+    }
 }
