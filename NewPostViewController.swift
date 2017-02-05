@@ -60,7 +60,9 @@ class NewPostViewController: UIViewController,UIImagePickerControllerDelegate, U
         
         //Challenge: - Make the user profile image rounded (borderradius)
         
-        
+        //Register to recieve notification
+        NotificationCenter.default.addObserver(self, selector: #selector(NewPostViewController.keyboardWillHide(notification:)), name: NSNotification.Name(rawValue: "keybordWillHide"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(NewPostViewController.keyboardWillShow(notification:)), name: NSNotification.Name(rawValue: "keybordWillShow"), object: nil)
     }
     
     
@@ -79,7 +81,31 @@ class NewPostViewController: UIViewController,UIImagePickerControllerDelegate, U
         return .lightContent
     }
     
+    //MARK - Text View Hanlder
+
+    func keyboardWillShow(notification: NSNotification) {
+     
+        let userInfo = notification.userInfo ?? [:]
+        let keyboardSize = (userInfo[UIKeyboardFrameBeginUserInfoKey]as! NSValue).cgRectValue.size
+        
+        self.postContentTextView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: keyboardSize.height, right: 0)
+        self.postContentTextView.scrollIndicatorInsets = self.postContentTextView.contentInset
+    }
     
+    
+    func keyboardWillHide(notification: NSNotification) {
+        self.postContentTextView.contentInset = UIEdgeInsets.zero
+        self.postContentTextView.scrollIndicatorInsets = UIEdgeInsets.zero
+        
+        
+    }
+    
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
+
+    //MARK - Pick Featured Img
     
     
     @IBAction func pickFeaturedImageClicked(_ sender: AnyObject) {
