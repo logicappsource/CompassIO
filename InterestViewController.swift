@@ -132,16 +132,17 @@ class InterestViewController: UIViewController {
     }
     
     
-    /*
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+  override  func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "Show Comments" {
+                let commentsVC = segue.destination as! CommentsViewController
+                commentsVC.post = sender as! Post
+            
+        }
     }
-    */
-
+    
+    
 }
 
 
@@ -181,6 +182,16 @@ extension InterestViewController: UITableViewDataSource{
 }
 
 
+
+
+extension InterestViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        self.tableView.deselectRow(at: indexPath, animated: true)
+        self.performSegue(withIdentifier: "Show Comments", sender: self.posts[indexPath.row])
+    }
+}
+
+
 //Zoom effect! on touch-drag
 extension InterestViewController: UIScrollViewDelegate {
     
@@ -208,6 +219,7 @@ extension InterestViewController: UIScrollViewDelegate {
     }
 }
 
+//Close Button
 extension InterestViewController: InterestHeaderViewDelegate {
     
     func closeButtonClicked() {

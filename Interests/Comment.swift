@@ -16,6 +16,7 @@ class Comment
     let user: User
     var commentText: String
     var numberOfLikes: Int
+    var userDidLike: Bool = false 
     
     init(id: String, createdAt: String, postId: String, author: User, commentText: String, numberOfLikes: Int)
     {

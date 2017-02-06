@@ -11,6 +11,7 @@
 		6E2E10261E47CF640027311F /* ActionButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E2E10241E47CF640027311F /* ActionButtonItem.swift */; };
 		6E2E10281E48A9250027311F /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E2E10271E48A9250027311F /* Comment.swift */; };
 		6E2E102A1E48A9B80027311F /* CommentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E2E10291E48A9B80027311F /* CommentsViewController.swift */; };
+		6E2E102D1E48B2D60027311F /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E2E102C1E48B2D60027311F /* CommentTableViewCell.swift */; };
 		6E9123D81E420A5900AA3687 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9123D61E420A5900AA3687 /* Post.swift */; };
 		6E9123D91E420A5900AA3687 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9123D71E420A5900AA3687 /* User.swift */; };
 		6E9123DB1E420C0400AA3687 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9123DA1E420C0400AA3687 /* PostTableViewCell.swift */; };
@@ -50,6 +51,7 @@
 		6E2E10241E47CF640027311F /* ActionButtonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionButtonItem.swift; sourceTree = "<group>"; };
 		6E2E10271E48A9250027311F /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		6E2E10291E48A9B80027311F /* CommentsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentsViewController.swift; sourceTree = "<group>"; };
+		6E2E102C1E48B2D60027311F /* CommentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
 		6E9123D61E420A5900AA3687 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		6E9123D71E420A5900AA3687 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		6E9123DA1E420C0400AA3687 /* PostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				6E2E10291E48A9B80027311F /* CommentsViewController.swift */,
+				6E2E102C1E48B2D60027311F /* CommentTableViewCell.swift */,
 			);
 			name = "Comments Screen";
 			path = ..;
@@ -345,6 +348,7 @@
 				6E2E10251E47CF640027311F /* ActionButton.swift in Sources */,
 				6EB61ABC1E41F4AE00F6AB19 /* InterestHeaderView.swift in Sources */,
 				6E9123D91E420A5900AA3687 /* User.swift in Sources */,
+				6E2E102D1E48B2D60027311F /* CommentTableViewCell.swift in Sources */,
 				6E2E10261E47CF640027311F /* ActionButtonItem.swift in Sources */,
 				F55772411B2C65C100DF2649 /* AppDelegate.swift in Sources */,
 				6E2E10281E48A9250027311F /* Comment.swift in Sources */,
