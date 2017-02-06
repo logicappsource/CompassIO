@@ -7,3 +7,5 @@ New Comment ViewController
 +Text View + Text view adjustment 
 +Auto layout 
 +Keyboard Appear/Dissaper 
++Floating Btn i comment VC 
++Segue from comments VC to Comment Composer 
