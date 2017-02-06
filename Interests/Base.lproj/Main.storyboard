@@ -301,6 +301,7 @@
                     <connections>
                         <outlet property="tableView" destination="2yd-Sw-OvU" id="lwK-lr-aQS"/>
                         <segue destination="Kmw-Yg-jvU" kind="presentation" identifier="Show Post Composer" id="pjj-bj-frO"/>
+                        <segue destination="sC3-7g-gR9" kind="show" identifier="Show Comments" id="6vu-XI-qZE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MxH-ta-OX6" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -571,7 +572,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1763" y="-145"/>
+            <point key="canvasLocation" x="1737" y="-496"/>
         </scene>
         <!--Comments View Controller-->
         <scene sceneID="7On-9x-Aar">
@@ -804,7 +805,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yQd-39-2t3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2423" y="-152"/>
+            <point key="canvasLocation" x="1671" y="176"/>
         </scene>
     </scenes>
     <resources>
