@@ -21,7 +21,7 @@ class CommentTableViewCell: UITableViewCell {
   
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var commentTextLabel: UILabel!
-    @IBOutlet weak var likeButton: UIButton!
+    @IBOutlet weak var likeButton: UIButton! //Deisgnable bnt
     // MARK: - Private
     private var currentUserDidLike: Bool = false
     
@@ -45,7 +45,7 @@ class CommentTableViewCell: UITableViewCell {
          */
         
     }
-    
+    //Designable btn 
     @IBAction func likeButtonClicked(_ sender: UIButton) {
         
         comment.userDidLike = !comment.userDidLike

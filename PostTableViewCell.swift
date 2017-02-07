@@ -25,8 +25,8 @@ class PostTableViewCell: UITableViewCell {
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var postImageView: UIImageView!
     @IBOutlet weak var postTextLabel: UILabel!
-    @IBOutlet weak var likeButton: UIButton!
-    @IBOutlet weak var commentButton: UIButton!
+    @IBOutlet weak var likeButton: UIButton! // DESIgnable button
+    @IBOutlet weak var commentButton: UIButton! //Designable BUtton
     
    
   
@@ -111,7 +111,7 @@ class PostTableViewCell: UITableViewCell {
         }
         */
     }
-    
+    //Designable butn 
     @IBAction func commentButtonClicked(sender: UIButton){
         
         /*
