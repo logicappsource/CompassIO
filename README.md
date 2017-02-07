@@ -9,3 +9,6 @@ New Comment ViewController
 +Keyboard Appear/Dissaper 
 +Floating Btn i comment VC 
 +Segue from comments VC to Comment Composer 
++Async. call on main thread  + Imagepickerhseet controller OR implement image on button INTERESTCONTROLLER 
+
+--------------------

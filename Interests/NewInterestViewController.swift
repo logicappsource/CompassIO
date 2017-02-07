@@ -87,31 +87,32 @@ class NewInterestViewController: UIViewController{
     
     
     
-    
+        //FIX THIS LATER IMPLEMENTATION - Image picker libraby + image on button to background-> 
     @IBAction func selectFeaturedImageButtonClicked(sender: DesignableButton)
     {
         let authorization = PHPhotoLibrary.authorizationStatus()
-        
+        //Declined
         if authorization == .notDetermined {
             PHPhotoLibrary.requestAuthorization({ (status) -> Void in
-                dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                DispatchQueue.main.async(execute: { () -> Void in
                     self.selectFeaturedImageButtonClicked(sender: sender)
                 })
             })
             return
         }
         
+            //Autohrized
         if authorization == .authorized {
-           let controller = ImagePickerController(mediaType: .ImageAndVideo)
-            
-            controller.addAction(ImagePickerAction(title: NSLocalizedString("Take Photo or Video", comment: "ActionTitle"),
+           let imagePicker = UIImagePickerController()
+            /*
+            imagePicker.addAction(imagePi(title: NSLocalizedString("Take Photo or Video", comment: "ActionTitle"),
                                              secondaryTitle: NSLocalizedString("Use this one", comment: "Action Title"),
                                              handler: { (_) -> () in
                                                 
                                                 self.presentCamera()
                                                 
                 }, secondaryHandler: { (action, numberOfPhotos) -> () in
-                    controller.getSelectedImagesWithCompletion({ (images) -> Void in
+                    imagePicker.getSelectedImagesWithCompletion({ (images) -> Void in
                         self.featuredImage = images[0]
                         self.backgroundImageView.image = self.featuredImage
                         self.backgroundColorView.alpha = 0.8
@@ -119,8 +120,8 @@ class NewInterestViewController: UIViewController{
             }))
             
             controller.addAction(ImagePickerAction(title: NSLocalizedString("Cancel", comment: "Action Title"), style: .Cancel, handler: nil, secondaryHandler: nil))
-            
-            presentViewController(controller, animated: true, completion: nil)
+            */
+            present(imagePicker, animated: true, completion: nil)
         }
     }
 
