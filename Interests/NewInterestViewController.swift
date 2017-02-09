@@ -87,7 +87,7 @@ class NewInterestViewController: UIViewController{
     
     
     
-        //FIX THIS LATER IMPLEMENTATION - Image picker libraby + image on button to background-> 
+        //FIX THIS LATER IMPLEMENTATION - Image picker libraby + image on button to background->
     @IBAction func selectFeaturedImageButtonClicked(sender: DesignableButton)
     {
         let authorization = PHPhotoLibrary.authorizationStatus()
