@@ -423,7 +423,7 @@
                                             <inset key="titleEdgeInsets" minX="4" minY="0.0" maxX="0.0" maxY="0.0"/>
                                             <state key="normal" title="New Interest" image="add"/>
                                             <connections>
-                                                <segue destination="4h2-Pa-iWh" kind="presentation" id="4pr-qf-Tiz"/>
+                                                <segue destination="4h2-Pa-iWh" kind="presentation" identifier="CreateNewInterest" id="4pr-qf-Tiz"/>
                                             </connections>
                                         </button>
                                     </subviews>

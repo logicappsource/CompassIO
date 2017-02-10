@@ -19,6 +19,8 @@ class HomeViewController: UIViewController
     
     // MARK: - UICollectionViewDataSource
     fileprivate var interests = Interest.createInterests()
+    private var slideRightTransitionAnimator = SlideRightTransitionAnimator()
+    
     
     
     
@@ -64,6 +66,12 @@ class HomeViewController: UIViewController
             let navigationViewController = segue.destination as! UINavigationController
             let interestViewController = navigationViewController.topViewController as! InterestViewController
             interestViewController.interest = interest
+            
+        } else if segue.identifier == "CreateNewInterest" {
+            let newInterestViewController = segue.destination as! NewInterestViewController
+
+            newInterestViewController.transitioningDelegate = slideRightTransitionAnimator
+            
         }
     }
 }
