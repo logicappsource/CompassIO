@@ -1003,7 +1003,7 @@
                         <outlet property="HideKeyboardInputAccessoryView" destination="SNB-er-VD2" id="C4t-mP-ntx"/>
                         <outlet property="backgroundColorView" destination="NxI-uh-dx3" id="GVn-ak-cil"/>
                         <outlet property="backgroundImageView" destination="g0n-KO-pmM" id="G4a-cl-zdo"/>
-                        <outlet property="closeButton" destination="LZ3-Oe-YPW" id="4v6-Do-Clh"/>
+                        <outlet property="closeButton" destination="LZ3-Oe-YPW" id="r40-IN-jN4"/>
                         <outlet property="createNewInterestButton" destination="vT9-i4-IxH" id="Igj-tf-XkO"/>
                         <outlet property="newInterestDescriptionTextView" destination="p7B-gB-OdY" id="M4w-w6-XGn"/>
                         <outlet property="newInterestTitleTextField" destination="UEb-ry-eED" id="QeS-Lh-Py7"/>

@@ -30,6 +30,8 @@ class NewInterestViewController: UIViewController{
     public var featuredImage: UIImage!
     
     
+    let imagePicker = UIImagePickerController()
+    
     // MARK: - VC LifeCycle 
     
  
@@ -47,6 +49,9 @@ class NewInterestViewController: UIViewController{
         // handle text view
         NotificationCenter.default.addObserver(self, selector: "keyboardWillHide:", name: NSNotification.Name.UIKeyboardWillHide, object: nil)
         NotificationCenter.default.addObserver(self, selector: "keyboardWillShow:", name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        
+        //Setting the UIImagepicker
+        imagePicker.delegate = self
     
     }
 
@@ -103,7 +108,9 @@ class NewInterestViewController: UIViewController{
         
             //Autohrized
         if authorization == .authorized {
-           let imagePicker = UIImagePickerController()
+            
+            
+           
             /*
             imagePicker.addAction(imagePi(title: NSLocalizedString("Take Photo or Video", comment: "ActionTitle"),
                                              secondaryTitle: NSLocalizedString("Use this one", comment: "Action Title"),
@@ -177,10 +184,12 @@ class NewInterestViewController: UIViewController{
     {
         // CHALLENGE: present normla image picker controller
         //              update the postImage + postImageView
-        let imagePicker = UIImagePickerController()
+       // let imagePicker = UIImagePickerController()
         imagePicker.allowsEditing = false
-        imagePicker.delegate = self
+       // imagePicker.delegate = self
         imagePicker.sourceType = UIImagePickerControllerSourceType.photoLibrary
+        imagePicker.mediaTypes = UIImagePickerController.availableMediaTypes(for: .photoLibrary)!
+        
         self.present(imagePicker, animated: true, completion: nil)
     }
     
@@ -196,10 +205,6 @@ class NewInterestViewController: UIViewController{
     }
 
     
-    
-    
-    
-
 }
 
 
@@ -242,10 +247,19 @@ extension NewInterestViewController : UIImagePickerControllerDelegate, UINavigat
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject])
     {
         self.backgroundImageView.image = info[UIImagePickerControllerOriginalImage] as? UIImage
+        
         featuredImage = self.backgroundImageView.image
         self.backgroundColorView.alpha = 0.8
         picker.dismiss(animated: true, completion: nil)
     }
+    
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        dismiss(animated: true, completion: nil)
+        
+    }
+    
+    
 }
 
 
