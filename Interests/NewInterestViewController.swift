@@ -29,6 +29,7 @@ class NewInterestViewController: UIViewController{
     
     public var featuredImage: UIImage!
     
+    private var slideRightThenPopTransitionAnimator = SlideRightThenPopTransitionAnimator()
     
     let imagePicker = UIImagePickerController()
     

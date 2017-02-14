@@ -20,6 +20,7 @@ class HomeViewController: UIViewController
     // MARK: - UICollectionViewDataSource
     fileprivate var interests = Interest.createInterests()
     private var slideRightTransitionAnimator = SlideRightTransitionAnimator()
+    private var popTransitionAnimator = PopTransitionAnimator() 
     
     
     
