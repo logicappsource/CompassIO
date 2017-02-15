@@ -8,6 +8,11 @@
 
 import UIKit
 
+
+protocol DiscoverTableViewCellDelegate {
+    func joinButtonClicked(interest: Interest!)
+}
+
 class DiscoverTableViewCell: UITableViewCell {
     
     
@@ -17,6 +22,8 @@ class DiscoverTableViewCell: UITableViewCell {
             updateUI()
         }
     }
+    
+    var delegate: DiscoverTableViewCellDelegate!
     
     
     @IBOutlet weak var backgroundViewWithShadow: CardView!
@@ -36,8 +43,10 @@ class DiscoverTableViewCell: UITableViewCell {
     }
     
     @IBAction func joinButtonClicked (sender: InterestButton){
-        
+          delegate?.joinButtonClicked(interest: interest)
     }
+    
+
 
     
 

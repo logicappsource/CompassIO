@@ -11,11 +11,10 @@ import UIKit
 class DiscoverViewController: UIViewController {
 
     
-    
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var refreshButton: UIButton!
-    @IBOutlet weak var searchBarInputAccessoryView: UIView!
+   // @IBOutlet weak var searchBarInputAccessoryView: UIView!
     
     public var searchText: String! {
         didSet{
@@ -24,7 +23,8 @@ class DiscoverViewController: UIViewController {
         }
     }
     
-    private var interests = [Interest]()
+    public var interests = [Interest]()
+    private var popTransitionAnimator = PopTransitionAnimator()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,13 +34,11 @@ class DiscoverViewController: UIViewController {
         //Make The Row Height dynamic 
         tableView.estimatedRowHeight = tableView.rowHeight
         tableView.rowHeight = UITableViewAutomaticDimension
-        
         tableView.backgroundColor = UIColor.clear
         tableView.separatorColor = UIColor.clear
         tableView.allowsSelection = false
-        
+ 
         searchBar.delegate = self
-        
         
         suggestInterests()
         
@@ -76,9 +74,6 @@ class DiscoverViewController: UIViewController {
     }
     
     
-    
-    
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -108,3 +103,33 @@ extension DiscoverViewController: UISearchBarDelegate {
     }
 }
 
+
+extension DiscoverViewController: UITableViewDataSource {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return interests.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Interest Cell", for: indexPath) as! DiscoverTableViewCell
+        
+        cell.interest = interests[indexPath.row]
+        cell.delegate  = self
+        cell.contentView.backgroundColor = UIColor.clear
+        
+        return cell
+        
+    }
+}
+
+extension DiscoverViewController: DiscoverTableViewCellDelegate {
+    
+    func joinButtonClicked(interest: Interest!) {
+        performSegue(withIdentifier: "Show Discover Interest", sender: interest)
+    }
+}
