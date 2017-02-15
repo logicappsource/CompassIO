@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		6E1340F91E52FE3D0040A59B /* SlideRightThenPopTransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E1340F81E52FE3D0040A59B /* SlideRightThenPopTransitionAnimator.swift */; };
+		6E1341431E545C8E0040A59B /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E1341421E545C8E0040A59B /* CardView.swift */; };
+		6E1341451E545EB80040A59B /* InterestButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E1341441E545EB80040A59B /* InterestButton.swift */; };
 		6E2E10251E47CF640027311F /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E2E10231E47CF640027311F /* ActionButton.swift */; };
 		6E2E10261E47CF640027311F /* ActionButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E2E10241E47CF640027311F /* ActionButtonItem.swift */; };
 		6E2E10281E48A9250027311F /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E2E10271E48A9250027311F /* Comment.swift */; };
@@ -81,6 +83,8 @@
 
 /* Begin PBXFileReference section */
 		6E1340F81E52FE3D0040A59B /* SlideRightThenPopTransitionAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideRightThenPopTransitionAnimator.swift; sourceTree = "<group>"; };
+		6E1341421E545C8E0040A59B /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		6E1341441E545EB80040A59B /* InterestButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterestButton.swift; sourceTree = "<group>"; };
 		6E2E10231E47CF640027311F /* ActionButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
 		6E2E10241E47CF640027311F /* ActionButtonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionButtonItem.swift; sourceTree = "<group>"; };
 		6E2E10271E48A9250027311F /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
@@ -167,6 +171,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6E1341471E5460A10040A59B /* Discover */ = {
+			isa = PBXGroup;
+			children = (
+				6E1341421E545C8E0040A59B /* CardView.swift */,
+				6E1341441E545EB80040A59B /* InterestButton.swift */,
+			);
+			name = Discover;
+			sourceTree = "<group>";
+		};
 		6E2E10221E47CF640027311F /* floating-button */ = {
 			isa = PBXGroup;
 			children = (
@@ -273,6 +286,7 @@
 				F55772731B2C6AD000DF2649 /* Home Screen */,
 				6EB61AB81E41F2AF00F6AB19 /* Interest Screen */,
 				6E2E102B1E48A9BE0027311F /* Comments Screen */,
+				6E1341471E5460A10040A59B /* Discover */,
 				F55772721B2C6ACA00DF2649 /* Model */,
 				6E2E106A1E49FC440027311F /* Spring2 */,
 				F55772441B2C65C100DF2649 /* Main.storyboard */,
@@ -469,12 +483,14 @@
 				6E2E108D1E49FC440027311F /* DesignableButton.swift in Sources */,
 				6EB61ABA1E41F31300F6AB19 /* InterestViewController.swift in Sources */,
 				6E2E10941E49FC440027311F /* ImageLoader.swift in Sources */,
+				6E1341451E545EB80040A59B /* InterestButton.swift in Sources */,
 				6E2E10251E47CF640027311F /* ActionButton.swift in Sources */,
 				6EB61ABC1E41F4AE00F6AB19 /* InterestHeaderView.swift in Sources */,
 				6E2E10891E49FC440027311F /* AsyncButton.swift in Sources */,
 				6E946F351E4E1718003CE1CA /* PopTransitionAnimator.swift in Sources */,
 				6E2E10A51E49FC440027311F /* UnwindSegue.swift in Sources */,
 				6E9123D91E420A5900AA3687 /* User.swift in Sources */,
+				6E1341431E545C8E0040A59B /* CardView.swift in Sources */,
 				6E2E102D1E48B2D60027311F /* CommentTableViewCell.swift in Sources */,
 				6E2E10A71E4A00D80027311F /* NewInterestViewController.swift in Sources */,
 				6E2E108F1E49FC440027311F /* DesignableLabel.swift in Sources */,
