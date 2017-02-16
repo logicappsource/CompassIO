@@ -24,6 +24,7 @@ class DiscoverViewController: UIViewController {
     }
     
     public var interests = [Interest]()
+    
     private var popTransitionAnimator = PopTransitionAnimator()
     
     override func viewDidLoad() {

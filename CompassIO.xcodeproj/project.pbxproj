@@ -7,11 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0406E95520B0FA349BB2BB5B /* Pods_CompassIOTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44AB9F82A3CD5819E5740173 /* Pods_CompassIOTests.framework */; };
+		1A46D3C6049D692597169387 /* Pods_CompassIOUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70026F163173FF0058916ABE /* Pods_CompassIOUITests.framework */; };
+		5D07C3740557198433303BDC /* Pods_CompassIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4776951A9ABCBC8000F9E680 /* Pods_CompassIO.framework */; };
 		6E1340F91E52FE3D0040A59B /* SlideRightThenPopTransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E1340F81E52FE3D0040A59B /* SlideRightThenPopTransitionAnimator.swift */; };
 		6E1341431E545C8E0040A59B /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E1341421E545C8E0040A59B /* CardView.swift */; };
 		6E1341451E545EB80040A59B /* InterestButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E1341441E545EB80040A59B /* InterestButton.swift */; };
 		6E1341491E5469120040A59B /* DiscoverTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E1341481E5469120040A59B /* DiscoverTableViewCell.swift */; };
 		6E13414B1E546C450040A59B /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E13414A1E546C450040A59B /* DiscoverViewController.swift */; };
+		6E235CAB1E55E2F800385235 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6E235CAA1E55E2F800385235 /* GoogleService-Info.plist */; };
 		6E2E10251E47CF640027311F /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E2E10231E47CF640027311F /* ActionButton.swift */; };
 		6E2E10261E47CF640027311F /* ActionButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E2E10241E47CF640027311F /* ActionButtonItem.swift */; };
 		6E2E10281E48A9250027311F /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E2E10271E48A9250027311F /* Comment.swift */; };
@@ -55,6 +59,7 @@
 		6E946F351E4E1718003CE1CA /* PopTransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E946F341E4E1718003CE1CA /* PopTransitionAnimator.swift */; };
 		6EB61ABA1E41F31300F6AB19 /* InterestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB61AB91E41F31300F6AB19 /* InterestViewController.swift */; };
 		6EB61ABC1E41F4AE00F6AB19 /* InterestHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB61ABB1E41F4AE00F6AB19 /* InterestHeaderView.swift */; };
+		6EFF1FFD1E55F0C8008D9858 /* PushNotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EFF1FFC1E55F0C8008D9858 /* PushNotificationViewController.swift */; };
 		F55772411B2C65C100DF2649 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55772401B2C65C100DF2649 /* AppDelegate.swift */; };
 		F55772461B2C65C100DF2649 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F55772441B2C65C100DF2649 /* Main.storyboard */; };
 		F55772481B2C65C100DF2649 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F55772471B2C65C100DF2649 /* Assets.xcassets */; };
@@ -84,11 +89,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		09C292302379B975BB1D11FB /* Pods-CompassIOUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CompassIOUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CompassIOUITests/Pods-CompassIOUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		13CDABBA72DC083171A46753 /* Pods-CompassIOTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CompassIOTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CompassIOTests/Pods-CompassIOTests.debug.xcconfig"; sourceTree = "<group>"; };
+		1B326E5103154A6EC97576DC /* Pods-CompassIO.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CompassIO.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CompassIO/Pods-CompassIO.debug.xcconfig"; sourceTree = "<group>"; };
+		36709B3048357C3CC49BD0BE /* Pods-CompassIOTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CompassIOTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CompassIOTests/Pods-CompassIOTests.release.xcconfig"; sourceTree = "<group>"; };
+		44AB9F82A3CD5819E5740173 /* Pods_CompassIOTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CompassIOTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		46261A5EA1B23365326E33BB /* Pods-CompassIOUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CompassIOUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CompassIOUITests/Pods-CompassIOUITests.release.xcconfig"; sourceTree = "<group>"; };
+		4776951A9ABCBC8000F9E680 /* Pods_CompassIO.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CompassIO.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C1E16902E7BCC1442977D9E /* Pods-CompassIO.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CompassIO.release.xcconfig"; path = "Pods/Target Support Files/Pods-CompassIO/Pods-CompassIO.release.xcconfig"; sourceTree = "<group>"; };
 		6E1340F81E52FE3D0040A59B /* SlideRightThenPopTransitionAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideRightThenPopTransitionAnimator.swift; sourceTree = "<group>"; };
 		6E1341421E545C8E0040A59B /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		6E1341441E545EB80040A59B /* InterestButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterestButton.swift; sourceTree = "<group>"; };
 		6E1341481E5469120040A59B /* DiscoverTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverTableViewCell.swift; sourceTree = "<group>"; };
 		6E13414A1E546C450040A59B /* DiscoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
+		6E235CAA1E55E2F800385235 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6E2E10231E47CF640027311F /* ActionButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
 		6E2E10241E47CF640027311F /* ActionButtonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionButtonItem.swift; sourceTree = "<group>"; };
 		6E2E10271E48A9250027311F /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
@@ -133,6 +147,9 @@
 		6E946F341E4E1718003CE1CA /* PopTransitionAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopTransitionAnimator.swift; sourceTree = "<group>"; };
 		6EB61AB91E41F31300F6AB19 /* InterestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterestViewController.swift; sourceTree = "<group>"; };
 		6EB61ABB1E41F4AE00F6AB19 /* InterestHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterestHeaderView.swift; sourceTree = "<group>"; };
+		6EFF1FFB1E55E970008D9858 /* CompassIO.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CompassIO.entitlements; sourceTree = "<group>"; };
+		6EFF1FFC1E55F0C8008D9858 /* PushNotificationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushNotificationViewController.swift; sourceTree = "<group>"; };
+		70026F163173FF0058916ABE /* Pods_CompassIOUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CompassIOUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F557723D1B2C65C100DF2649 /* CompassIO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CompassIO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F55772401B2C65C100DF2649 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F55772451B2C65C100DF2649 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -155,6 +172,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D07C3740557198433303BDC /* Pods_CompassIO.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -162,6 +180,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0406E95520B0FA349BB2BB5B /* Pods_CompassIOTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -169,6 +188,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A46D3C6049D692597169387 /* Pods_CompassIOUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,13 +285,39 @@
 			path = ..;
 			sourceTree = "<group>";
 		};
+		8A555082E44C5DC686C1C20A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4776951A9ABCBC8000F9E680 /* Pods_CompassIO.framework */,
+				44AB9F82A3CD5819E5740173 /* Pods_CompassIOTests.framework */,
+				70026F163173FF0058916ABE /* Pods_CompassIOUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A35CDD119A48A5DDEA5B2FB3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1B326E5103154A6EC97576DC /* Pods-CompassIO.debug.xcconfig */,
+				6C1E16902E7BCC1442977D9E /* Pods-CompassIO.release.xcconfig */,
+				13CDABBA72DC083171A46753 /* Pods-CompassIOTests.debug.xcconfig */,
+				36709B3048357C3CC49BD0BE /* Pods-CompassIOTests.release.xcconfig */,
+				09C292302379B975BB1D11FB /* Pods-CompassIOUITests.debug.xcconfig */,
+				46261A5EA1B23365326E33BB /* Pods-CompassIOUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		F55772341B2C65C100DF2649 = {
 			isa = PBXGroup;
 			children = (
+				6EFF1FFB1E55E970008D9858 /* CompassIO.entitlements */,
 				F557723F1B2C65C100DF2649 /* Interests */,
 				F55772541B2C65C100DF2649 /* InterestsTests */,
 				F557725F1B2C65C100DF2649 /* InterestsUITests */,
 				F557723E1B2C65C100DF2649 /* Products */,
+				A35CDD119A48A5DDEA5B2FB3 /* Pods */,
+				8A555082E44C5DC686C1C20A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -299,8 +345,10 @@
 				F55772471B2C65C100DF2649 /* Assets.xcassets */,
 				F55772491B2C65C100DF2649 /* LaunchScreen.storyboard */,
 				F557724C1B2C65C100DF2649 /* Info.plist */,
+				6E235CAA1E55E2F800385235 /* GoogleService-Info.plist */,
 				6E946ED61E4B5827003CE1CA /* Transition Animations */,
 				6E2E10221E47CF640027311F /* floating-button */,
+				6EFF1FFC1E55F0C8008D9858 /* PushNotificationViewController.swift */,
 			);
 			path = Interests;
 			sourceTree = "<group>";
@@ -351,9 +399,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F55772651B2C65C100DF2649 /* Build configuration list for PBXNativeTarget "CompassIO" */;
 			buildPhases = (
+				4BDB0DBA7C70BB6173ED774B /* [CP] Check Pods Manifest.lock */,
 				F55772391B2C65C100DF2649 /* Sources */,
 				F557723A1B2C65C100DF2649 /* Frameworks */,
 				F557723B1B2C65C100DF2649 /* Resources */,
+				ADAAEC6DD7EDDE08025646FB /* [CP] Embed Pods Frameworks */,
+				665D805E0215F9AAE72907D4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -368,9 +419,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F55772681B2C65C100DF2649 /* Build configuration list for PBXNativeTarget "CompassIOTests" */;
 			buildPhases = (
+				2DCB25A887286E219E49D596 /* [CP] Check Pods Manifest.lock */,
 				F557724D1B2C65C100DF2649 /* Sources */,
 				F557724E1B2C65C100DF2649 /* Frameworks */,
 				F557724F1B2C65C100DF2649 /* Resources */,
+				FDBEC1A2108F58CD730F7758 /* [CP] Embed Pods Frameworks */,
+				E75B498C657C194684ECE519 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -386,9 +440,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F557726B1B2C65C100DF2649 /* Build configuration list for PBXNativeTarget "CompassIOUITests" */;
 			buildPhases = (
+				B3D63B46D77A939297D66DAD /* [CP] Check Pods Manifest.lock */,
 				F55772581B2C65C100DF2649 /* Sources */,
 				F55772591B2C65C100DF2649 /* Frameworks */,
 				F557725A1B2C65C100DF2649 /* Resources */,
+				0FC202C6E335068C6E44B30F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -413,6 +469,11 @@
 						CreatedOnToolsVersion = 7.0;
 						DevelopmentTeam = JWZKK84V7N;
 						LastSwiftMigration = 0800;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					F55772501B2C65C100DF2649 = {
 						CreatedOnToolsVersion = 7.0;
@@ -456,6 +517,7 @@
 				F55772481B2C65C100DF2649 /* Assets.xcassets in Resources */,
 				F55772461B2C65C100DF2649 /* Main.storyboard in Resources */,
 				6E2E10981E49FC440027311F /* LoadingView.xib in Resources */,
+				6E235CAB1E55E2F800385235 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -474,6 +536,129 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0FC202C6E335068C6E44B30F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CompassIOUITests/Pods-CompassIOUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2DCB25A887286E219E49D596 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		4BDB0DBA7C70BB6173ED774B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		665D805E0215F9AAE72907D4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CompassIO/Pods-CompassIO-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ADAAEC6DD7EDDE08025646FB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CompassIO/Pods-CompassIO-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B3D63B46D77A939297D66DAD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E75B498C657C194684ECE519 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CompassIOTests/Pods-CompassIOTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FDBEC1A2108F58CD730F7758 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CompassIOTests/Pods-CompassIOTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F55772391B2C65C100DF2649 /* Sources */ = {
@@ -513,6 +698,7 @@
 				6E2E10931E49FC440027311F /* DesignableView.swift in Sources */,
 				6E2E108B1E49FC440027311F /* AutoTextView.swift in Sources */,
 				6E2E10921E49FC440027311F /* DesignableTextView.swift in Sources */,
+				6EFF1FFD1E55F0C8008D9858 /* PushNotificationViewController.swift in Sources */,
 				6E9123D81E420A5900AA3687 /* Post.swift in Sources */,
 				6E2E108A1E49FC440027311F /* AsyncImageView.swift in Sources */,
 				6E2E10911E49FC440027311F /* DesignableTextField.swift in Sources */,
@@ -667,8 +853,10 @@
 		};
 		F55772661B2C65C100DF2649 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1B326E5103154A6EC97576DC /* Pods-CompassIO.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = CompassIO.entitlements;
 				DEVELOPMENT_TEAM = JWZKK84V7N;
 				INFOPLIST_FILE = Interests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -680,8 +868,10 @@
 		};
 		F55772671B2C65C100DF2649 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6C1E16902E7BCC1442977D9E /* Pods-CompassIO.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = CompassIO.entitlements;
 				DEVELOPMENT_TEAM = JWZKK84V7N;
 				INFOPLIST_FILE = Interests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -693,6 +883,7 @@
 		};
 		F55772691B2C65C100DF2649 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 13CDABBA72DC083171A46753 /* Pods-CompassIOTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = InterestsTests/Info.plist;
@@ -706,6 +897,7 @@
 		};
 		F557726A1B2C65C100DF2649 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 36709B3048357C3CC49BD0BE /* Pods-CompassIOTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = InterestsTests/Info.plist;
@@ -719,6 +911,7 @@
 		};
 		F557726C1B2C65C100DF2649 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 09C292302379B975BB1D11FB /* Pods-CompassIOUITests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = InterestsUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -732,6 +925,7 @@
 		};
 		F557726D1B2C65C100DF2649 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 46261A5EA1B23365326E33BB /* Pods-CompassIOUITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = InterestsUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

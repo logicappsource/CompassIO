@@ -1,10 +1,8 @@
 //
 //  Comment.swift
-//  ProjectInterest
-//
-//  Created by Duc Tran on 6/3/15.
-//  Copyright (c) 2015 Developer Inspirus. All rights reserved.
-//
+//  compassIO
+//  Created by LogicAppSourceIO on 27/01/17.
+//  Copyright © 2017 Logicappsource. All rights reserved.
 
 import UIKit
 
