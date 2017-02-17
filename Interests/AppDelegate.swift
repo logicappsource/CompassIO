@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import FBSDKLoginKit
 
 
 @UIApplicationMain
@@ -32,11 +33,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             application.registerForRemoteNotifications()
         }
         
-        FIRApp.configure()
-        
+    
+        //Push Noti Reg
         NotificationCenter.default.addObserver(self, selector: #selector(self.tokenRefreshNotification(notification:)), name: NSNotification.Name.firInstanceIDTokenRefresh, object: nil)
         
+        
+      
+        FIRApp.configure()
+        FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
+        
         return true
+        
+        
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
@@ -59,6 +67,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
         
           connectToFCM()
+        FBSDKAppEvents.activateApp()
     }
 
     func applicationWillTerminate(_ application: UIApplication) {
@@ -71,6 +80,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         connectToFCM()
     }
+    
 
     func connectToFCM() {
         FIRMessaging.messaging().connect { (error) in
@@ -81,6 +91,41 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
+    
+    //IOS 9- to 10. BUG - white screeen fix
+    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        // Override point for customization after application launch.
+        return FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
+    }
+    
+    
+    
+    func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
+        
+        let facebookDidHandle = FBSDKApplicationDelegate.sharedInstance().application(
+            application,
+            open: url,
+            sourceApplication: sourceApplication,
+            annotation: annotation)
+        // Add any custom logic here.
+        return facebookDidHandle
+    }
+    
+    
+    /*
+    
+    func application(application: UIApplication,
+                     openURL url: NSURL,
+                     sourceApplication: String?,
+                     annotation: AnyObject?) -> Bool {
+        return FBSDKApplicationDelegate.sharedInstance().application(application,
+                                                                     open: url as URL!,
+                                                                     sourceApplication: sourceApplication,
+                                                                     annotation: annotation)
+    }    
+    */
+    
+    
 
 }
 
