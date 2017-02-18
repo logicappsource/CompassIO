@@ -28,6 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             application.registerForRemoteNotifications()
             
         } else {
+            
             //Setup IOS 10 ->
             let types: UIRemoteNotificationType = [.alert, .badge, .sound]
             application.registerForRemoteNotifications()

@@ -12,28 +12,63 @@ import FBSDKLoginKit
 
 import Firebase
 
-
-//IMplement Google + Authentication 
+//IMplement Google + Authentication
 //Implement Twiiter logign auth 
 //IMplement Email login 
 
-
-
-
 class SignInViewController: UIViewController{
     
-    
+  
     @IBOutlet weak var usernameLbl: UITextField!
+    
+    
     @IBOutlet weak var passwordLbl: UITextField!
     
-
-    
-    @IBAction func loginBtn(_ sender: AnyObject) {
+    @IBAction func GooggleLoginBtn(_ sender: AnyObject ){
         
         
     }
     
     
+    
+    
+    func firebaseAuthenticate(_ credential: FIRAuthCredential) {
+        FIRAuth.auth()?.signIn(with: credential, completion: { (user, error) in
+            if (error != nil) {
+                print("Unable to authenticate with Firebase \(error)")
+            } else {
+                print("Successfully authenticated with Firebase")
+            }
+        })
+    }
+    
+    
+
+        //Auth - Email + Password
+    @IBAction func loginBtn(_ sender: AnyObject) {
+        
+        //Check if there is a Value
+        if let email = usernameLbl.text, let pwd = passwordLbl.text {
+            
+            FIRAuth.auth()?.signIn(withEmail: email, password: pwd, completion: { (user, error) in
+                if (error == nil ) {
+                    print("Email user is authenticated with Firebase ")
+                } else {
+                    FIRAuth.auth()?.createUser(withEmail: email, password: pwd, completion: { (user, error) in
+                        if (error != nil)  {
+                            print("Unable to Authenticate user EMAIL! with firebase! ")
+                        } else {
+                            print("Successfully Authenticated with Firebase")
+                        }
+                    })
+                }
+            })
+        }
+
+    }
+    
+    
+    //Auth Fb Login
     @IBAction func FbLoginBtn(_ sender: AnyObject) {
         
         let facebookLogin = FBSDKLoginManager()
@@ -54,7 +89,6 @@ class SignInViewController: UIViewController{
         }
         
     }
-    
     
   
     
@@ -82,24 +116,7 @@ class SignInViewController: UIViewController{
 
     
 
-    
-    
-    
-    
-    func firebaseAuthenticate(_ credential: FIRAuthCredential) {
-            FIRAuth.auth()?.signIn(with: credential, completion: { (user, error) in
-                if (error != nil) {
-                    print("Unable to authenticate with Firebase \(error)")
-                } else {
-                    print("Successfully authenticated with Firebase")
-                }
-            })
-    }
-    
-    
-    
-    
-    
+
     
     
 }
