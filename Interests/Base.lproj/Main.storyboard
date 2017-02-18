@@ -366,6 +366,7 @@
                                             </state>
                                             <connections>
                                                 <action selector="loginBtn:" destination="zz4-Sw-cE6" eventType="touchUpInside" id="PSn-Xy-mId"/>
+                                                <segue destination="02c-Bi-Rj8" kind="presentation" identifier="authHome" id="OaR-KX-yJR"/>
                                             </connections>
                                         </button>
                                     </subviews>
@@ -505,10 +506,24 @@
                                                 <segue destination="4h2-Pa-iWh" kind="presentation" identifier="CreateNewInterest" id="4pr-qf-Tiz"/>
                                             </connections>
                                         </button>
+                                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IIn-Sr-exb">
+                                            <frame key="frameInset" minX="312" minY="28" width="77" height="30"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                            <state key="normal" title="Sign Out">
+                                                <color key="titleColor" red="0.93887245801513464" green="1" blue="0.92856804713464702" alpha="1" colorSpace="calibratedRGB"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="signOutBtn:" destination="02c-Bi-Rj8" eventType="touchUpInside" id="0yc-Mn-dPM"/>
+                                                <segue destination="zz4-Sw-cE6" kind="show" identifier="logout" id="v8Z-zg-wA9"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="pv9-Br-AdC" firstAttribute="top" secondItem="2r0-op-ifw" secondAttribute="top" constant="28" id="0Pq-a4-YVK"/>
                                         <constraint firstItem="0H6-SY-JN0" firstAttribute="leading" secondItem="2r0-op-ifw" secondAttribute="leading" id="13m-QO-hIS"/>
+                                        <constraint firstAttribute="trailing" secondItem="IIn-Sr-exb" secondAttribute="trailing" constant="211" id="2fN-Pc-yK2"/>
+                                        <constraint firstItem="0H6-SY-JN0" firstAttribute="top" secondItem="IIn-Sr-exb" secondAttribute="bottom" constant="16" id="46C-fk-5ZU"/>
+                                        <constraint firstItem="IIn-Sr-exb" firstAttribute="top" secondItem="2r0-op-ifw" secondAttribute="top" constant="28" id="BEu-Pf-13M"/>
                                         <constraint firstAttribute="trailing" secondItem="0H6-SY-JN0" secondAttribute="trailing" id="DIE-s3-gRy"/>
                                         <constraint firstAttribute="trailing" secondItem="kPz-S6-dqz" secondAttribute="trailing" constant="8" id="Dc5-U6-wuq"/>
                                         <constraint firstAttribute="bottom" secondItem="kPz-S6-dqz" secondAttribute="bottom" constant="8" id="Ffp-Lg-xHe"/>
@@ -545,7 +560,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jax-6N-37M" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-726" y="-161"/>
+            <point key="canvasLocation" x="-726.08695652173924" y="-161.41304347826087"/>
         </scene>
         <!--New Post View Controller-->
         <scene sceneID="Kms-NC-Enc">

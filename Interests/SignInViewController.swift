@@ -9,6 +9,8 @@
 import UIKit
 import FBSDKCoreKit
 import FBSDKLoginKit
+import SwiftKeychainWrapper
+
 
 import Firebase
 
@@ -30,6 +32,23 @@ class SignInViewController: UIViewController{
     }
     
     
+
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        // Do any additional setup after loading the view.
+    }
+
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        
+        if let _ = KeychainWrapper.standard.string(forKey: KEY_UID) {
+            performSegue(withIdentifier: "authHome", sender: nil)
+            print("keychain found redirect or segue")
+        }
+    }
     
     
     func firebaseAuthenticate(_ credential: FIRAuthCredential) {
@@ -38,6 +57,15 @@ class SignInViewController: UIViewController{
                 print("Unable to authenticate with Firebase \(error)")
             } else {
                 print("Successfully authenticated with Firebase")
+                
+                if let user = user {
+                   // KeychainWrapper.set(user.uid, forKey: KEY_UID)
+                    self.completeSignIn(id: user.uid)
+               
+                }
+              
+                
+                //self.performSegue(withIdentifier: "authHome", sender: nil  )
             }
         })
     }
@@ -53,12 +81,19 @@ class SignInViewController: UIViewController{
             FIRAuth.auth()?.signIn(withEmail: email, password: pwd, completion: { (user, error) in
                 if (error == nil ) {
                     print("Email user is authenticated with Firebase ")
+                    if let user = user {
+                         self.completeSignIn(id: user.uid)
+                    }
                 } else {
                     FIRAuth.auth()?.createUser(withEmail: email, password: pwd, completion: { (user, error) in
                         if (error != nil)  {
                             print("Unable to Authenticate user EMAIL! with firebase! ")
                         } else {
                             print("Successfully Authenticated with Firebase")
+                            if let user = user {
+                                 self.completeSignIn(id: user.uid)
+                            }
+                            
                         }
                     })
                 }
@@ -83,8 +118,6 @@ class SignInViewController: UIViewController{
                 print("Successfully Authenticated with Facebook")
                 let credential = FIRFacebookAuthProvider.credential(withAccessToken: FBSDKAccessToken.current().tokenString)
                 self.firebaseAuthenticate(credential)
-                
-                
             }
         }
         
@@ -92,12 +125,6 @@ class SignInViewController: UIViewController{
     
   
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -115,7 +142,11 @@ class SignInViewController: UIViewController{
     */
 
     
-
+    func completeSignIn(id: String) {
+             let saveSuccessful: Bool = KeychainWrapper.standard.set(id, forKey: KEY_UID)
+             print("Data saved to keychain \(saveSuccessful)")
+             performSegue(withIdentifier: "authHome", sender: nil)
+    }
 
     
     

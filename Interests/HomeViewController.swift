@@ -6,6 +6,8 @@
 //  Copyright © 2017 Logicappsource. All rights reserved.
 //
 import UIKit
+import SwiftKeychainWrapper
+import Firebase
 
 class HomeViewController: UIViewController
 {
@@ -23,6 +25,14 @@ class HomeViewController: UIViewController
     private var popTransitionAnimator = PopTransitionAnimator() 
     
     
+    @IBAction func signOutBtn(_ sender: AnyObject) {
+        let removeSuccessful: Bool = KeychainWrapper.standard.remove(key: KEY_UID)
+        print("Palle : ID removed from KEYCHAIN :  \(removeSuccessful)")
+        
+        try! FIRAuth.auth()?.signOut()
+        performSegue(withIdentifier: "logout", sender: nil)
+        
+    }
     
     
     
