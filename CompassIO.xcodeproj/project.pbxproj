@@ -52,6 +52,7 @@
 		6E2E10A51E49FC440027311F /* UnwindSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E2E10881E49FC440027311F /* UnwindSegue.swift */; };
 		6E2E10A71E4A00D80027311F /* NewInterestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E2E10A61E4A00D80027311F /* NewInterestViewController.swift */; };
 		6E89AB921E59001800581A21 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E89AB911E59001800581A21 /* Constants.swift */; };
+		6E89AB951E59BC2D00581A21 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E89AB941E59BC2D00581A21 /* DataService.swift */; };
 		6E9123D81E420A5900AA3687 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9123D61E420A5900AA3687 /* Post.swift */; };
 		6E9123D91E420A5900AA3687 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9123D71E420A5900AA3687 /* User.swift */; };
 		6E9123DB1E420C0400AA3687 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9123DA1E420C0400AA3687 /* PostTableViewCell.swift */; };
@@ -142,6 +143,7 @@
 		6E2E10881E49FC440027311F /* UnwindSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnwindSegue.swift; sourceTree = "<group>"; };
 		6E2E10A61E4A00D80027311F /* NewInterestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewInterestViewController.swift; sourceTree = "<group>"; };
 		6E89AB911E59001800581A21 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		6E89AB941E59BC2D00581A21 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		6E9123D61E420A5900AA3687 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		6E9123D71E420A5900AA3687 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		6E9123DA1E420C0400AA3687 /* PostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
@@ -275,6 +277,14 @@
 			name = Util;
 			sourceTree = "<group>";
 		};
+		6E89AB931E59BC1300581A21 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				6E89AB941E59BC2D00581A21 /* DataService.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
 		6E946ED61E4B5827003CE1CA /* Transition Animations */ = {
 			isa = PBXGroup;
 			children = (
@@ -355,6 +365,7 @@
 			isa = PBXGroup;
 			children = (
 				F55772401B2C65C100DF2649 /* AppDelegate.swift */,
+				6E89AB931E59BC1300581A21 /* Services */,
 				F55772731B2C6AD000DF2649 /* Home Screen */,
 				6EB61AB81E41F2AF00F6AB19 /* Interest Screen */,
 				6E2E102B1E48A9BE0027311F /* Comments Screen */,
@@ -699,6 +710,7 @@
 				6E2E108D1E49FC440027311F /* DesignableButton.swift in Sources */,
 				6EB61ABA1E41F31300F6AB19 /* InterestViewController.swift in Sources */,
 				6E2E10941E49FC440027311F /* ImageLoader.swift in Sources */,
+				6E89AB951E59BC2D00581A21 /* DataService.swift in Sources */,
 				6E1341451E545EB80040A59B /* InterestButton.swift in Sources */,
 				6E2E10251E47CF640027311F /* ActionButton.swift in Sources */,
 				6EB61ABC1E41F4AE00F6AB19 /* InterestHeaderView.swift in Sources */,

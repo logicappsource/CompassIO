@@ -28,7 +28,6 @@ class HomeViewController: UIViewController
     @IBAction func signOutBtn(_ sender: AnyObject) {
         let removeSuccessful: Bool = KeychainWrapper.standard.remove(key: KEY_UID)
         print("Palle : ID removed from KEYCHAIN :  \(removeSuccessful)")
-        
         try! FIRAuth.auth()?.signOut()
         performSegue(withIdentifier: "logout", sender: nil)
         

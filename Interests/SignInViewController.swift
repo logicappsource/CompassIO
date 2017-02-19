@@ -32,8 +32,6 @@ class SignInViewController: UIViewController{
     }
     
     
-
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -60,7 +58,8 @@ class SignInViewController: UIViewController{
                 
                 if let user = user {
                    // KeychainWrapper.set(user.uid, forKey: KEY_UID)
-                    self.completeSignIn(id: user.uid)
+                    let userData = ["provider": credential.provider]
+                    self.completeSignIn(id: user.uid, userData: userData)
                
                 }
               
@@ -82,7 +81,8 @@ class SignInViewController: UIViewController{
                 if (error == nil ) {
                     print("Email user is authenticated with Firebase ")
                     if let user = user {
-                         self.completeSignIn(id: user.uid)
+                         let userData = ["provider": user.providerID]
+                         self.completeSignIn(id: user.uid, userData:  userData)
                     }
                 } else {
                     FIRAuth.auth()?.createUser(withEmail: email, password: pwd, completion: { (user, error) in
@@ -91,9 +91,9 @@ class SignInViewController: UIViewController{
                         } else {
                             print("Successfully Authenticated with Firebase")
                             if let user = user {
-                                 self.completeSignIn(id: user.uid)
+                                 let userData = ["provider": user.providerID]
+                                 self.completeSignIn(id: user.uid, userData: userData)
                             }
-                            
                         }
                     })
                 }
@@ -131,18 +131,9 @@ class SignInViewController: UIViewController{
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
     
-    func completeSignIn(id: String) {
+    func completeSignIn(id: String, userData: Dictionary<String, String>) {
+             DataService.ds.createFirbaseUser(uid: id, userData: userData)
              let saveSuccessful: Bool = KeychainWrapper.standard.set(id, forKey: KEY_UID)
              print("Data saved to keychain \(saveSuccessful)")
              performSegue(withIdentifier: "authHome", sender: nil)
