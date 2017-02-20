@@ -50,8 +50,10 @@ class HomeViewController: UIViewController
             flowLayout.itemSize = CGSizeMake(250.0, 300.0)
         }*/
         
-        
         configureUserProfile()
+        
+        
+        
     }
     
     func configureUserProfile() {

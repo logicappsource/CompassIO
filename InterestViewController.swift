@@ -8,6 +8,7 @@
 //
 
 import UIKit
+import Firebase
 
 class InterestViewController: UIViewController {
     
@@ -65,6 +66,12 @@ class InterestViewController: UIViewController {
         createNewPostButton()
         
         fetchPosts()
+        
+        //Firebase Data Posts
+        DataService.ds.REF_POSTS.observe(.value, with: { (snapshot) in
+             print(snapshot.value)
+        })
+        
         
     }
     
