@@ -10,7 +10,6 @@ import UIKit
 import Firebase
 import FBSDKLoginKit
 
-
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -38,8 +37,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //Push Noti Reg
         NotificationCenter.default.addObserver(self, selector: #selector(self.tokenRefreshNotification(notification:)), name: NSNotification.Name.firInstanceIDTokenRefresh, object: nil)
         
-        
-      
         FIRApp.configure()
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
         

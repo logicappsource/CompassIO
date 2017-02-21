@@ -1195,7 +1195,7 @@
                                                 <rect key="frame" x="0.0" y="22" width="600" height="300"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hIA-8f-PEM" id="cH8-Gb-SGU">
-                                                    <frame key="frameInset" width="600" height="299.5"/>
+                                                    <frame key="frameInset" width="600" height="299.66666666666669"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eNC-vn-TYz" customClass="CardView" customModule="CompassIO" customModuleProvider="target">

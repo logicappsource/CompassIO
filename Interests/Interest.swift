@@ -1,23 +1,18 @@
-//
-//  Interest.swift
-//  compassIO
-//
-//  Created by LogicAppSourceIO on 27/01/17.
-//  Copyright © 2017 Logicappsource. All rights reserved.
-//
-
-
 
 import UIKit
 
-class Interest
-{
+class Interest {
+    
+    
+    
     // MARK: - Public API
     var title = ""
     var description = ""
     var numberOfMembers = 0
     var numberOfPosts = 0
     var featuredImage: UIImage!
+    
+    
     
     init(title: String, description: String, featuredImage: UIImage!)
     {
@@ -42,3 +37,4 @@ class Interest
         ]
     }
 }
+

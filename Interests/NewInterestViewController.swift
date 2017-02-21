@@ -8,6 +8,7 @@
 
 import UIKit
 import Photos
+import Firebase
 class NewInterestViewController: UIViewController{
     
     
@@ -40,7 +41,7 @@ class NewInterestViewController: UIViewController{
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+         createNewInterest()
         newInterestTitleTextField.inputAccessoryView = HideKeyboardInputAccessoryView
         newInterestDescriptionTextView.inputAccessoryView = HideKeyboardInputAccessoryView
         
@@ -154,13 +155,28 @@ class NewInterestViewController: UIViewController{
             shakePhotoButton()
         } else {
             // create a new interest
-     
+            
+            //Locally and then ppush to cloud 
+
+            createNewInterest()
             
             self.hideKeyboard()
             self.dismiss(animated: true, completion: nil)
         }
     }
     
+    
+    func createNewInterest() {
+       
+        DataService.ds.REF_INTERESTS.observe(.value, with:  { (snapshot) in
+            if let snapshot = snapshot.children.allObjects as? [FIRDataSnapshot] {
+                for snap in snapshot {
+                    print("Interest  \(snap.value)")
+                }
+            }
+        })
+        
+    }
     
     
     func shakeTextField()

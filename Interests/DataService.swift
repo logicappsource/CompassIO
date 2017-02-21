@@ -18,6 +18,7 @@ class DataService {
     private var _REF_BASE = DB_BASE
     private var _REF_POSTS = DB_BASE.child("posts")
     private var _REF_USERS = DB_BASE.child("users")
+    private var _REF_INTERESTS = DB_BASE.child("Interest")
     
     var REEF_BASE: FIRDatabaseReference {
         return _REF_BASE
@@ -29,6 +30,10 @@ class DataService {
     
     var REF_USERS: FIRDatabaseReference {
         return _REF_USERS
+    }
+    
+    var REF_INTERESTS: FIRDatabaseReference {
+        return _REF_INTERESTS
     }
     
     func createFirbaseUser(uid: String, userData: Dictionary<String, String>) {

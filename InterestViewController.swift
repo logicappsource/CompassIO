@@ -15,6 +15,8 @@ class InterestViewController: UIViewController {
     //MARK: - Public API 
     var interest: Interest! = Interest.createInterests()[0]
     
+    var aInterest = [InterestFIR]()
+    
     
     //MARK: - Private 
     @IBOutlet weak var tableView: UITableView!
@@ -67,11 +69,19 @@ class InterestViewController: UIViewController {
         
         fetchPosts()
         
-        //Firebase Data Posts
-        DataService.ds.REF_POSTS.observe(.value, with: { (snapshot) in
-             print(snapshot.value)
-        })
-        
+        //Firebase Data InterestFIR Fetch
+        DataService.ds.REF_INTERESTS.observe(.value, with: { (snapshot) in
+            if let snapshot = snapshot.children.allObjects as? [FIRDataSnapshot] {
+                    for snap in snapshot {
+                        print("SNAP Interest: \(snap)")
+                        if let postDict = snap.value as? Dictionary<String, AnyObject> {
+                            let key = snap.key
+                            let interest = InterestFIR(postKey: key, postData: postDict)
+                            self.aInterest.append(interest)
+                        }
+                    }
+                }
+            })
         
     }
     
@@ -120,9 +130,6 @@ class InterestViewController: UIViewController {
         
     }
    
-    
-    
-    
     func fetchPosts() {
         posts = Post.allPosts
         tableView.reloadData()
@@ -163,10 +170,14 @@ extension InterestViewController: UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // Return the number of rows in the section.
+     
+        
         return posts.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        
         
         let post = posts[indexPath.row]
         
@@ -186,8 +197,44 @@ extension InterestViewController: UITableViewDataSource{
         
     }
     
-}
-
+    
+    
+    
+    /*
+     func numberOfSections(in tableView: UITableView) -> Int {
+     //Returns nr of sections
+     return 1
+     }
+     
+     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+     // Return the number of rows in the section.
+     return posts.count
+     }
+     
+     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+     
+     let post = posts[indexPath.row]
+     
+     if post.postImage != nil {
+     let cell = tableView.dequeueReusableCell(withIdentifier: "PostCellWithImage", for: indexPath) as! PostTableViewCell
+     cell.post = post
+     
+     return cell
+     
+     }else {
+     let cell = tableView.dequeueReusableCell(withIdentifier: "PostCellWithoutImage", for: indexPath) as! PostTableViewCell
+     cell.post = post
+     
+     return cell
+     
+     }
+     
+     }
+*/
+    
+    
+    
+    }
 
 
 

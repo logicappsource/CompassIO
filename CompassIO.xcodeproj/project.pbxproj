@@ -59,6 +59,7 @@
 		6E9123E51E42A6A600AA3687 /* NewPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9123E41E42A6A600AA3687 /* NewPostViewController.swift */; };
 		6E946ED51E4B47EB003CE1CA /* SlideRightTransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E946ED41E4B47EB003CE1CA /* SlideRightTransitionAnimator.swift */; };
 		6E946F351E4E1718003CE1CA /* PopTransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E946F341E4E1718003CE1CA /* PopTransitionAnimator.swift */; };
+		6E97BECF1E5C61B800A9E00F /* InterestFIR.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E97BECE1E5C61B800A9E00F /* InterestFIR.swift */; };
 		6EB61ABA1E41F31300F6AB19 /* InterestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB61AB91E41F31300F6AB19 /* InterestViewController.swift */; };
 		6EB61ABC1E41F4AE00F6AB19 /* InterestHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB61ABB1E41F4AE00F6AB19 /* InterestHeaderView.swift */; };
 		6EC7BD261E56536700DD0927 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC7BD251E56536700DD0927 /* SignInViewController.swift */; };
@@ -150,6 +151,7 @@
 		6E9123E41E42A6A600AA3687 /* NewPostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewPostViewController.swift; sourceTree = "<group>"; };
 		6E946ED41E4B47EB003CE1CA /* SlideRightTransitionAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideRightTransitionAnimator.swift; sourceTree = "<group>"; };
 		6E946F341E4E1718003CE1CA /* PopTransitionAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopTransitionAnimator.swift; sourceTree = "<group>"; };
+		6E97BECE1E5C61B800A9E00F /* InterestFIR.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterestFIR.swift; sourceTree = "<group>"; };
 		6EB61AB91E41F31300F6AB19 /* InterestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterestViewController.swift; sourceTree = "<group>"; };
 		6EB61ABB1E41F4AE00F6AB19 /* InterestHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterestHeaderView.swift; sourceTree = "<group>"; };
 		6EC7BD251E56536700DD0927 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
@@ -411,6 +413,7 @@
 				6E9123D61E420A5900AA3687 /* Post.swift */,
 				6E9123D71E420A5900AA3687 /* User.swift */,
 				F55772701B2C6A5400DF2649 /* Interest.swift */,
+				6E97BECE1E5C61B800A9E00F /* InterestFIR.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -717,6 +720,7 @@
 				6E2E10891E49FC440027311F /* AsyncButton.swift in Sources */,
 				6E946F351E4E1718003CE1CA /* PopTransitionAnimator.swift in Sources */,
 				6E2E10A51E49FC440027311F /* UnwindSegue.swift in Sources */,
+				6E97BECF1E5C61B800A9E00F /* InterestFIR.swift in Sources */,
 				6E9123D91E420A5900AA3687 /* User.swift in Sources */,
 				6E1341431E545C8E0040A59B /* CardView.swift in Sources */,
 				6E2E102D1E48B2D60027311F /* CommentTableViewCell.swift in Sources */,
