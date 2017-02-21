@@ -81,6 +81,7 @@ class InterestViewController: UIViewController {
                         }
                     }
                 }
+                    self.tableView.reloadData()
             })
         
     }
