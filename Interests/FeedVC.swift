@@ -18,7 +18,11 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
     @IBOutlet weak var captionField: FancyField!
     
     var posts = [PostFIRFeed]()
+    
     var imagePicker: UIImagePickerController!
+    
+    
+   
     //static var imageCache: Cache<NSString, UIImage> = Cache()
     static var imageCache: NSCache<NSString, UIImage> = NSCache()
     var imageSelected = false
@@ -28,6 +32,11 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
         
         tableView.delegate = self
         tableView.dataSource = self
+        
+        imagePicker = UIImagePickerController()
+        imagePicker.allowsEditing = true
+        imagePicker.delegate = self
+        
         
         
         // ACCES DATA  -> FORM THIS POITN OT FIREBASE
@@ -80,44 +89,20 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
     }
 
     
-    /*
-    
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let image = info[UIImagePickerControllerEditedImage] as? UIImage {
             imageAdd.image = image
-            imageSelected = true
         } else {
-            print("JESS: A valid image wasn't selected")
+            print("A valid image wasent selected")
         }
         imagePicker.dismiss(animated: true, completion: nil)
     }
+    
+    
     
     @IBAction func addImageTapped(_ sender: AnyObject) {
         present(imagePicker, animated: true, completion: nil)
     }
     
-    @IBAction func postBtnTapped(_ sender: AnyObject) {
-          }
-    
-    
-    
-    func postToFirebase(imgUrl: String) {
-        let post: Dictionary<String, AnyObject> = [
-            "caption": captionField.text! as AnyObject,
-            "imageUrl": imgUrl as AnyObject,
-            "likes": 0 as AnyObject
-        ]
-        
-        let firebasePost = DataService.ds.REF_POSTS.childByAutoId()
-        firebasePost.setValue(post)
-        
-        captionField.text = ""
-        imageSelected = false
-        imageAdd.image = UIImage(named: "add-image")
-        
-        tableView.reloadData()
-    }
-    
-    */
-    
+       
 }
