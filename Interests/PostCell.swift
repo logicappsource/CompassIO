@@ -34,7 +34,10 @@ class PostCell: UITableViewCell {
         self.post = post
         self.caption.text = post.caption
         self.likesLbl.text = "\(post.likes)"
+    }
+    
         
+        /* bug 
         //Download image //check if cache first
         if img != nil {
             self.postImg.image = img
@@ -56,6 +59,8 @@ class PostCell: UITableViewCell {
                     })
                 }
             }
+    
+    */
         }
 
 
