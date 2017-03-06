@@ -106,6 +106,33 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
         imagePicker.dismiss(animated: true, completion: nil)
     }
     
+    //Posting to firebase
+    @IBAction func postBtnTapped(_ sender: Any) {
+        guard let caption = captionField.text, caption != "" else {
+            print("palle: caption must be entered")
+            return
+        }
+        guard let image = imageAdd.image else {
+            print("Palle: An Image must be selected ")
+            return
+        }
+        if let imgData  = UIImageJPEGRepresentation(image, 0.2) {
+            
+            let imgUid = NSUUID().uuidString
+            let metaData = FIRStorageMetadata()
+            metaData.contentType = "image/jpeg"
+            
+            DataService.ds.REF_POST_IMAGES.child(imgUid).put(imgData, metadata: metaData) { (metaData, error) in
+                if error != nil {
+                    print("Palle: Unable to upload image to firebase storage")
+                } else {
+                    print("Palle: Successfully uploaded image to firebsae")
+                    let downloadUrl = metaData?.downloadURL()?.absoluteString
+                }
+            }
+        }
+    }
+    
     
     
     @IBAction func addImageTapped(_ sender: AnyObject) {
