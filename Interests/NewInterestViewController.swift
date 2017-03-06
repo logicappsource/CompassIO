@@ -12,6 +12,9 @@ import Firebase
 class NewInterestViewController: UIViewController{
     
     
+    /* UIPicker needs to be re impl and fix*/
+    
+    
     // MARK: -  IBOutlet
     @IBOutlet weak var backgroundImageView: UIImageView!
     @IBOutlet weak var backgroundColorView: UIView!

@@ -1,5 +1,5 @@
 //
-//  POST.swift
+//  Post.swift
 //  compassIO
 //  Created by LogicAppSourceIO on 27/01/17.
 //  Copyright © 2017 Logicappsource. All rights reserved.
@@ -10,6 +10,8 @@ import UIKit
 class Post
 {
     static let className = "Post"
+    
+    /*IMplement firebase   -> saving object  to fir*/
     
     // Properties
     var id: String
@@ -37,6 +39,9 @@ class Post
         self.interestId = interestId    // this allows to initialize roomId but cannot ever change anymore
         self.userDidLike = userDidLike
     }
+    
+    
+    
     
     // sample hard-coded data
     

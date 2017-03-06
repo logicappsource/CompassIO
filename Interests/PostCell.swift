@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 
+
 class PostCell: UITableViewCell {
     
     @IBOutlet weak var profileImg: UIImageView!
@@ -27,14 +28,34 @@ class PostCell: UITableViewCell {
         
     }
     
+
     
-    func configureCell(post: PostFIRFeed) {
+    func configureCell(post: PostFIRFeed, img: UIImage? = nil) {
         self.post = post
         self.caption.text = post.caption
-        //self.likesLbl.text = "\(post.likes)"
+        self.likesLbl.text = "\(post.likes)"
         
-        
-    }
-    
-    
-}
+        //Download image //check if cache first
+        if img != nil {
+            self.postImg.image = img
+        } else {
+            print("palle:fail")
+                let ref = FIRStorage.storage().reference(forURL: post.imageUrl)
+                ref.data(withMaxSize: 2 * 1024 * 1024, completion: { (data, error) in
+                    if error != nil {
+                        print("palle: Unable to download iamge from Firebase storage")
+                    }else {
+                        print("palle: Image downloaded from firebase")
+                        if let imgData = data {
+                            if let img = UIImage(data: imgData) {
+                                    self.postImg.image = img
+                                    FeedVC.imageCache.setObject(img, forKey: post.imageUrl as NSString ) //uden NSSTring
+                             }
+                          }
+                        }
+                    })
+                }
+            }
+        }
+
+

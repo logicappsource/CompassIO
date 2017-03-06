@@ -10,7 +10,12 @@ import UIKit
 import Foundation
 
 class PostTableViewCell: UITableViewCell {
-
+    
+    
+    //UI Button -> Action Code
+    
+    
+    
  
     // MARK: - Public API 
     var post: Post! {

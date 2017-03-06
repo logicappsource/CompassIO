@@ -434,8 +434,8 @@
 			children = (
 				6E2E10271E48A9250027311F /* Comment.swift */,
 				6E9123D61E420A5900AA3687 /* Post.swift */,
-				6E9123D71E420A5900AA3687 /* User.swift */,
 				F55772701B2C6A5400DF2649 /* Interest.swift */,
+				6E9123D71E420A5900AA3687 /* User.swift */,
 				6E97BECE1E5C61B800A9E00F /* InterestFIR.swift */,
 			);
 			name = Model;
@@ -527,7 +527,7 @@
 					F557723C1B2C65C100DF2649 = {
 						CreatedOnToolsVersion = 7.0;
 						DevelopmentTeam = JWZKK84V7N;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0820;
 						SystemCapabilities = {
 							com.apple.Keychain = {
 								enabled = 0;
@@ -539,12 +539,12 @@
 					};
 					F55772501B2C65C100DF2649 = {
 						CreatedOnToolsVersion = 7.0;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0820;
 						TestTargetID = F557723C1B2C65C100DF2649;
 					};
 					F557725B1B2C65C100DF2649 = {
 						CreatedOnToolsVersion = 7.0;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0820;
 						TestTargetID = F557723C1B2C65C100DF2649;
 					};
 				};

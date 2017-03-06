@@ -13,16 +13,15 @@ import SwiftKeychainWrapper
 
 
 import Firebase
-
 //IMplement Google + Authentication
-//Implement Twiiter logign auth 
+//Implement Twiiter logign auth
+
 //IMplement Email login 
 
 class SignInViewController: UIViewController{
     
   
     @IBOutlet weak var usernameLbl: UITextField!
-    
     
     @IBOutlet weak var passwordLbl: UITextField!
     
@@ -42,7 +41,7 @@ class SignInViewController: UIViewController{
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         
-        if let _ = KeychainWrapper.standard.string(forKey: KEY_UID) {
+        if let _ = KeychainWrapper.standard.string(forKey: KEY_UID) { // KEY chain Wrapper
             performSegue(withIdentifier: "authHome", sender: nil)
             print("keychain found redirect or segue")
         }
@@ -84,7 +83,7 @@ class SignInViewController: UIViewController{
                          let userData = ["provider": user.providerID]
                          self.completeSignIn(id: user.uid, userData:  userData)
                     }
-                } else {
+                } else { // CREate user
                     FIRAuth.auth()?.createUser(withEmail: email, password: pwd, completion: { (user, error) in
                         if (error != nil)  {
                             print("Unable to Authenticate user EMAIL! with firebase! ")
@@ -131,7 +130,7 @@ class SignInViewController: UIViewController{
     }
     
 
-    
+    //Complete signin 
     func completeSignIn(id: String, userData: Dictionary<String, String>) {
              DataService.ds.createFirbaseUser(uid: id, userData: userData)
              let saveSuccessful: Bool = KeychainWrapper.standard.set(id, forKey: KEY_UID)

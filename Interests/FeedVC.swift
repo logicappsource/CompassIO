@@ -71,19 +71,27 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
         let post = posts[indexPath.row]
         
         if let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell") as? PostCell {
-               cell.configureCell(post: post)
-        return cell
-    } else {
+            
+            if let img = FeedVC.imageCache.object(forKey: post.imageUrl as NSString) { //remove ns string
+                 cell.configureCell(post: post, img: img)
+                 return cell
+            } else {
+                cell.configureCell(post: post)
+                return cell
+            }
+            
+        } else {
             return PostCell()
         }
-        
+      
         
     }
     
+    //Log out
     @IBAction func signOutTapped(_ sender: AnyObject) {
         //let keychainResult = KeychainWrapper.removeObjectForKey(KEY_UID)
         let keychainResult = KeychainWrapper.defaultKeychainWrapper.remove(key: KEY_UID)
-        print("JESS: ID removed from keychain \(keychainResult)")
+        print("Patrick: ID removed from keychain \(keychainResult)")
         try! FIRAuth.auth()?.signOut()
         performSegue(withIdentifier: "goToSignIn", sender: nil)
     }

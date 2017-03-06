@@ -13,7 +13,7 @@ import UIKit
 class InterestFIR {
     
     
-    //LATER MODIFICATION SAME TPYE IS NOT ACAIVLE . UIIMAGE AND INT CANNORT CONVERT TO TYPE INT () FIREBASE
+    //Firebase access and model saved -> object ->UIIMAGE AND INT CANNORT CONVERT TO TYPE  parse INT () 
     
     //MARK: - Public API 
     private var _caption: String!

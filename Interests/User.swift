@@ -8,6 +8,11 @@ import UIKit
 
 class User
 {
+    
+    /*
+        Implement firebase parsed data 
+     */
+    
     var id: String
     var fullName: String
     var email: String

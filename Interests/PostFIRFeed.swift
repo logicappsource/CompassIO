@@ -12,7 +12,7 @@ import Firebase
 class PostFIRFeed {
     private var _caption: String!
     private var _imageUrl: String!
-    private var _likes: Int!
+    private var _likes: Int = 0
     private var _postKey: String!
     private var _postRef: FIRDatabaseReference!
     
