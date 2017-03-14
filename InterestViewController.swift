@@ -4,7 +4,7 @@
 //
 //  Created by LogicAppSourceIO on 01/02/17.
 //  Copyright © 2017 LogicAppSourceIO. All rights reserved.
-// interest Information & Posts
+// interestPosts
 //
 
 import UIKit
@@ -39,7 +39,10 @@ class InterestViewController: UIViewController {
     }
     
     
-    
+
+    @IBAction func closeBtn (){
+       self.dismiss(animated: true, completion: nil)
+    }
 
     override func viewDidLoad() {
         // Do any additional setup after loading the view.
@@ -78,6 +81,14 @@ class InterestViewController: UIViewController {
                             let key = snap.key
                             let interest = InterestFIR(postKey: key, postData: postDict)
                             self.aInterest.append(interest)
+                            
+                                /*  RETURNING -> Put data in view postcell
+                                description = 1;
+                                featuredImage = 1;
+                                numberOfMembers = 1;
+                                numberOfPosts = 1;
+                                title = 1;
+                                    */
                         }
                     }
                 }

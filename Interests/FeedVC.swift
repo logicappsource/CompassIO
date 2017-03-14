@@ -119,7 +119,8 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
         }
         if let imgData  = UIImageJPEGRepresentation(image, 0.2) {
             
-            let imgUid = NSUUID().uuidString
+            let imgUid = NSUUID().uuidString  // COULD BE ERROR  6ED9D149-4869-4A12-A9B4-B69D4B7C2E27 -- 
+        
             let metaData = FIRStorageMetadata()
             metaData.contentType = "image/jpeg"
             

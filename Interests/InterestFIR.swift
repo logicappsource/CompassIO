@@ -10,7 +10,8 @@ import Foundation
 import UIKit
 
 
-class InterestFIR {
+class InterestFIR { //REFERENCE INTEREST DB
+    
     
     
     //Firebase access and model saved -> object ->UIIMAGE AND INT CANNORT CONVERT TO TYPE  parse INT () 

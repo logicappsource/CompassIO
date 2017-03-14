@@ -8,8 +8,9 @@
 
 import UIKit
 import Foundation
+import Firebase
 
-class PostTableViewCell: UITableViewCell {
+class PostTableViewCell: UITableViewCell { //SHould be edited
     
     
     //UI Button -> Action Code
@@ -34,7 +35,13 @@ class PostTableViewCell: UITableViewCell {
     @IBOutlet weak var commentButton: UIButton! //Designable BUtton
     
    
-  
+   /*Implement data to ui from existing db fir reference*/
+    var psot: PostFIRFeed!
+    var likesRef: FIRDatabaseReference!
+    
+    
+    
+    
 
     
     // MARK: - Private 
