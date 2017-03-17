@@ -107,6 +107,8 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
         imagePicker.dismiss(animated: true, completion: nil)
     }
     
+    
+    
     //Posting to firebase
     @IBAction func postBtnTapped(_ sender: Any) {
         guard let caption = captionField.text, caption != "" else {
@@ -129,6 +131,9 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
                     print("Palle: Unable to upload image to firebase storage")
                 } else {
                     print("Palle: Successfully uploaded image to firebsae")
+                    
+                    
+                    self.performSegue(withIdentifier: "postSuccessReturnInt", sender: nil)
                     let downloadURL = metaData?.downloadURL()?.absoluteString
                     if let url = downloadURL {
                             self.postToFirebase(imgUrl: downloadURL!)
