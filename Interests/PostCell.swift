@@ -37,9 +37,10 @@ class PostCell: UITableViewCell { //Configured in the feedvc
         
         
         //Download image //check if cache first //Use GUARD?
-        //2 first img 
+        //Dont load first 2 image.
         //"Object postImg/C331AF98-9D6F-4908-BF1F-0AF759944E9D does not exist."
         //("Object postImg/CFE70F72-C481-45F4-8793-163674ADB666 does not exist.")
+        
         if img != nil {
             self.postImg.image = img
             

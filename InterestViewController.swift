@@ -18,6 +18,8 @@ class InterestViewController: UIViewController {
     var aInterest = [InterestFIR]()
     
     
+    
+    
     //MARK: - Private 
     @IBOutlet weak var tableView: UITableView!
     public let tableHeaderHeight: CGFloat = 350.0
@@ -89,6 +91,8 @@ class InterestViewController: UIViewController {
                                 numberOfPosts = 1;
                                 title = 1;
                                     */
+                            
+                                print("Snap Shots Interest view VC : \(self.aInterest)")
                         }
                     }
                 }

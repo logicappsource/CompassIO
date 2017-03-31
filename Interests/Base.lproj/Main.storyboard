@@ -133,7 +133,7 @@
                                         <rect key="frame" x="0.0" y="222" width="600" height="387"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="phY-vo-jJd" id="Igh-5p-q17">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="386"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="386.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile1" translatesAutoresizingMaskIntoConstraints="NO" id="GJs-5n-P1D">
@@ -225,7 +225,7 @@
                                         <rect key="frame" x="0.0" y="609" width="600" height="171"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ghl-i7-ZdM" id="qw7-Bp-Qxm">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="170"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="170.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile1" translatesAutoresizingMaskIntoConstraints="NO" id="gTR-EC-vTY">
@@ -731,7 +731,7 @@
                                         <rect key="frame" x="0.0" y="22" width="600" height="387"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4Xu-s1-dur" id="0P1-fE-9QT">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="386"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="386.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile1" translatesAutoresizingMaskIntoConstraints="NO" id="cQA-YD-QsE">
@@ -809,7 +809,7 @@
                                         <rect key="frame" x="0.0" y="409" width="600" height="171"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xEN-Tn-d2A" id="Quf-Kw-UIM">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="170"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="170.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile1" translatesAutoresizingMaskIntoConstraints="NO" id="9PS-OH-Uf8">
@@ -878,7 +878,7 @@
                                         <rect key="frame" x="0.0" y="580" width="600" height="109"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BXx-UR-c5q" id="YVG-DA-Hys">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="108"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="108.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="David" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kwz-Os-Rvk">
@@ -1257,7 +1257,7 @@
                                                 <rect key="frame" x="0.0" y="22" width="600" height="300"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hIA-8f-PEM" id="cH8-Gb-SGU">
-                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="299"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="299.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eNC-vn-TYz" customClass="CardView" customModule="CompassIO" customModuleProvider="target">
@@ -1510,16 +1510,16 @@
                                                             </subviews>
                                                         </stackView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="AiZ-F1-79m">
-                                                            <rect key="frame" x="550" y="315" width="77" height="0.0"/>
+                                                            <rect key="frame" x="550.5" y="315" width="76.5" height="0.0"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Likes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dFM-DN-xZD">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="36" height="0.0"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="35.5" height="0.0"/>
                                                                     <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
                                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.54000000000000004" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8888" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jUA-b8-ebK">
-                                                                    <rect key="frame" x="41" y="0.0" width="36" height="0.0"/>
+                                                                    <rect key="frame" x="40.5" y="0.0" width="36" height="0.0"/>
                                                                     <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
                                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.87" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
@@ -1590,7 +1590,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1132" y="988"/>
+            <point key="canvasLocation" x="1066" y="1362"/>
         </scene>
     </scenes>
     <resources>

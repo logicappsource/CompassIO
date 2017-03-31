@@ -13,7 +13,7 @@ import Firebase
 class PostTableViewCell: UITableViewCell { //SHould be edited
     
     
-    //UI Button -> Action Code
+    //UI button configured as Designable buttonn with ani.
     
     
     
@@ -31,8 +31,8 @@ class PostTableViewCell: UITableViewCell { //SHould be edited
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var postImageView: UIImageView!
     @IBOutlet weak var postTextLabel: UILabel!
-    @IBOutlet weak var likeButton: UIButton! // DESIgnable button
-    @IBOutlet weak var commentButton: UIButton! //Designable BUtton
+    @IBOutlet weak var likeButton: DesignableButton!
+    @IBOutlet weak var commentButton: DesignableButton!
     
    
    /*Implement data to ui from existing db fir reference*/
@@ -40,10 +40,7 @@ class PostTableViewCell: UITableViewCell { //SHould be edited
     var likesRef: FIRDatabaseReference!
     
     
-    
-    
 
-    
     // MARK: - Private 
     private var currentUserDidLike: Bool = false
     
@@ -71,19 +68,19 @@ class PostTableViewCell: UITableViewCell { //SHould be edited
     
     //Spring or designable button errror with weak . ->
     private func configureButtonAppearance () {
-        /*
+        
         likeButton.cornerRadius = 3.0
         likeButton.borderWidth = 2.0
-        likeButton.borderColor = UIColor.lightGrayColor()
+        likeButton.borderColor = UIColor.lightGray
         
         commentButton.cornerRadius = 3.0
         commentButton.borderWidth = 2.0
-        commentButton.borderColor = UIColor.lightGrayColor()
-        */
+        commentButton.borderColor = UIColor.lightGray
+        
         
     }
     
-    @IBAction func likeButtonClicked(_ sender: UIButton) {
+    @IBAction func likeButtonClicked(_ sender: DesignableButton) {
         
         post.userDidLike = !post.userDidLike
         if (post.userDidLike) {
@@ -99,7 +96,7 @@ class PostTableViewCell: UITableViewCell { //SHould be edited
         
             changeLikeButtonColor()
         
-        /*
+        
             //Animation 
             sender.animation = "pop"
             sender.curve = "spring"
@@ -107,26 +104,26 @@ class PostTableViewCell: UITableViewCell { //SHould be edited
             sender.damping = 0.1
             sender.velocity = 0.2
             sender.animate()
- */
+ 
         
     }
     
     //UI BUTTON - change to designable
     private func changeLikeButtonColor() {
-        /*
+        
         if currentUserDidLike {
-            likeButton.borderColor = UIColor.redColor()
-            likeButton.tintColor = UIColor.redColor()
+            likeButton.borderColor = UIColor.red
+            likeButton.tintColor = UIColor.red
         } else {
-            likeButton.borderColor = UIColor.lightGrayColor()
-            likeButton.tintColor = UIColor.lightGrayColor()
+            likeButton.borderColor = UIColor.lightGray
+            likeButton.tintColor = UIColor.lightGray
         }
-        */
+        
     }
     //Designable butn 
-    @IBAction func commentButtonClicked(sender: UIButton){
+    @IBAction func commentButtonClicked(sender: DesignableButton){
         
-        /*
+        
          //Animation
          sender.animation = "pop"
          sender.curve = "spring"
@@ -134,8 +131,7 @@ class PostTableViewCell: UITableViewCell { //SHould be edited
          sender.damping = 0.1
          sender.velocity = 0.2
          sender.animate()
-         */
-
+        
         
     }
     
