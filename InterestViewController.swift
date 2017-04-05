@@ -76,6 +76,7 @@ class InterestViewController: UIViewController {
         
         //Firebase Data InterestFIR Fetch
         DataService.ds.REF_INTERESTS.observe(.value, with: { (snapshot) in
+            
             if let snapshot = snapshot.children.allObjects as? [FIRDataSnapshot] {
                     for snap in snapshot {
                         print("SNAP Interest: \(snap)")

@@ -31,8 +31,8 @@ class PostTableViewCell: UITableViewCell { //SHould be edited
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var postImageView: UIImageView!
     @IBOutlet weak var postTextLabel: UILabel!
-    @IBOutlet weak var likeButton: DesignableButton!
-    @IBOutlet weak var commentButton: DesignableButton!
+    @IBOutlet weak var likeButton: UIButton!
+    @IBOutlet weak var commentButton: UIButton!
     
    
    /*Implement data to ui from existing db fir reference*/
@@ -68,7 +68,7 @@ class PostTableViewCell: UITableViewCell { //SHould be edited
     
     //Spring or designable button errror with weak . ->
     private func configureButtonAppearance () {
-        
+        /*
         likeButton.cornerRadius = 3.0
         likeButton.borderWidth = 2.0
         likeButton.borderColor = UIColor.lightGray
@@ -76,7 +76,7 @@ class PostTableViewCell: UITableViewCell { //SHould be edited
         commentButton.cornerRadius = 3.0
         commentButton.borderWidth = 2.0
         commentButton.borderColor = UIColor.lightGray
-        
+        */
         
     }
     
@@ -111,19 +111,20 @@ class PostTableViewCell: UITableViewCell { //SHould be edited
     //UI BUTTON - change to designable
     private func changeLikeButtonColor() {
         
+        /*
         if currentUserDidLike {
             likeButton.borderColor = UIColor.red
             likeButton.tintColor = UIColor.red
         } else {
             likeButton.borderColor = UIColor.lightGray
             likeButton.tintColor = UIColor.lightGray
-        }
+        }*/
         
     }
     //Designable butn 
-    @IBAction func commentButtonClicked(sender: DesignableButton){
+    @IBAction func commentButtonClicked(sender: UIButton){
         
-        
+        /*
          //Animation
          sender.animation = "pop"
          sender.curve = "spring"
@@ -131,7 +132,7 @@ class PostTableViewCell: UITableViewCell { //SHould be edited
          sender.damping = 0.1
          sender.velocity = 0.2
          sender.animate()
-        
+        */
         
     }
     

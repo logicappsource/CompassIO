@@ -51,6 +51,7 @@
 		6E2E10A41E49FC440027311F /* TransitionZoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E2E10871E49FC440027311F /* TransitionZoom.swift */; };
 		6E2E10A51E49FC440027311F /* UnwindSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E2E10881E49FC440027311F /* UnwindSegue.swift */; };
 		6E2E10A71E4A00D80027311F /* NewInterestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E2E10A61E4A00D80027311F /* NewInterestViewController.swift */; };
+		6E607BB31E8E7287009BE1BE /* InterestFirbaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E607BB21E8E7287009BE1BE /* InterestFirbaseViewController.swift */; };
 		6E89AB921E59001800581A21 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E89AB911E59001800581A21 /* Constants.swift */; };
 		6E89AB951E59BC2D00581A21 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E89AB941E59BC2D00581A21 /* DataService.swift */; };
 		6E9123D81E420A5900AA3687 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9123D61E420A5900AA3687 /* Post.swift */; };
@@ -148,6 +149,7 @@
 		6E2E10871E49FC440027311F /* TransitionZoom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionZoom.swift; sourceTree = "<group>"; };
 		6E2E10881E49FC440027311F /* UnwindSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnwindSegue.swift; sourceTree = "<group>"; };
 		6E2E10A61E4A00D80027311F /* NewInterestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewInterestViewController.swift; sourceTree = "<group>"; };
+		6E607BB21E8E7287009BE1BE /* InterestFirbaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterestFirbaseViewController.swift; sourceTree = "<group>"; };
 		6E89AB911E59001800581A21 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		6E89AB941E59BC2D00581A21 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		6E9123D61E420A5900AA3687 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
@@ -326,6 +328,7 @@
 				6E9123DA1E420C0400AA3687 /* PostTableViewCell.swift */,
 				6EB61ABB1E41F4AE00F6AB19 /* InterestHeaderView.swift */,
 				6E9123E41E42A6A600AA3687 /* NewPostViewController.swift */,
+				6E607BB21E8E7287009BE1BE /* InterestFirbaseViewController.swift */,
 			);
 			name = "Interest Screen";
 			path = ..;
@@ -773,6 +776,7 @@
 				6E2E10261E47CF640027311F /* ActionButtonItem.swift in Sources */,
 				F55772411B2C65C100DF2649 /* AppDelegate.swift in Sources */,
 				6E2E10281E48A9250027311F /* Comment.swift in Sources */,
+				6E607BB31E8E7287009BE1BE /* InterestFirbaseViewController.swift in Sources */,
 				6E2E108E1E49FC440027311F /* DesignableImageView.swift in Sources */,
 				6E2E109C1E49FC440027311F /* SpringAnimation.swift in Sources */,
 				6E2E10901E49FC440027311F /* DesignableTabBarController.swift in Sources */,

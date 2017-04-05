@@ -20,7 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         
-        //IOS 8.0 -- PUSH NOTIFICATIONS
+        // Compatible with ios versions DEFINED : ->
+        //IOS 8.0 -- PUSH NOTIFICATIONS //
         if #available(iOS 8.0, *) {
             let settings:UIUserNotificationSettings = UIUserNotificationSettings(types: [.alert, .badge, .sound], categories: nil)
             application.registerUserNotificationSettings(settings)
