@@ -1,4 +1,22 @@
 # CompassIO
+
+Functionality Implemented 
+
++Facebook API login
++Firebase login 
++Post commenting stored on firebase -> image 
+
+
+
+Images of the App 
+
+- http://imgur.com/a/WQQrg
+- http://imgur.com/a/pvFq3
+- http://imgur.com/a/aETNH
+- http://imgur.com/a/JfgeS
+
+
+
 Need to configured 
 
 New Comment ViewController 
@@ -12,3 +30,4 @@ New Comment ViewController
 +Async. call on main thread  + Imagepickerhseet controller OR implement image on button INTERESTCONTROLLER 
 
 --------------------
+
